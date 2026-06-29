@@ -1,41 +1,1001 @@
 id_paciente,nome_ficticio,regiao_administrativa,latitude,longitude,tipo_atendimento,prioridade,janela_inicio,janela_fim,demanda_caixas,temperatura_controlada,status
-1,Paciente_3286,Ceilândia,-15.857399,-48.129898,violencia_domestica,2,0,24,3,False,pendente
-2,Paciente_7912,Ceilândia,-15.805264,-48.080526,emergencia_obstetrica,1,0,24,1,False,pendente
-3,Paciente_4257,Ceilândia,-15.851904,-48.133287,emergencia_obstetrica,1,0,24,3,False,pendente
-4,Paciente_1106,Gama,-16.021929,-48.067247,medicamento_hormonal,3,8,18,1,True,pendente
-5,Paciente_2674,Plano Piloto,-15.795675,-47.964152,medicamento_hormonal,3,8,18,1,True,pendente
-6,Paciente_1711,Plano Piloto,-15.820028,-47.894951,medicamento_hormonal,3,8,18,3,True,pendente
-7,Paciente_2291,Plano Piloto,-15.776077,-47.882388,pos_parto,4,14,18,3,False,pendente
-8,Paciente_4150,Samambaia,-15.847748,-48.075318,medicamento_hormonal,3,8,18,3,True,pendente
-9,Paciente_2307,Ceilândia,-15.855734,-48.133668,medicamento_hormonal,3,8,18,1,True,pendente
-10,Paciente_3664,Ceilândia,-15.82899,-48.115627,medicamento_hormonal,3,8,18,2,True,pendente
-11,Paciente_3803,Samambaia,-15.897339,-48.103442,emergencia_obstetrica,1,0,24,3,False,pendente
-12,Paciente_6313,Taguatinga,-15.853296,-48.063633,violencia_domestica,2,0,24,1,False,pendente
-13,Paciente_5386,Taguatinga,-15.813792,-48.038097,pos_parto,4,14,18,1,False,pendente
-14,Paciente_4483,Taguatinga,-15.808312,-48.052369,medicamento_hormonal,3,8,18,3,True,pendente
-15,Paciente_3340,Plano Piloto,-15.790137,-47.888245,pos_parto,4,14,18,2,False,pendente
-16,Paciente_8019,Taguatinga,-15.848302,-48.052718,medicamento_hormonal,3,8,18,3,True,pendente
-17,Paciente_9348,Plano Piloto,-15.7935,-47.879967,violencia_domestica,2,0,24,2,False,pendente
-18,Paciente_3621,Ceilândia,-15.798937,-48.083012,violencia_domestica,2,0,24,3,False,pendente
-19,Paciente_9669,Plano Piloto,-15.770059,-47.941223,pos_parto,4,14,18,2,False,pendente
-20,Paciente_9797,Gama,-15.995453,-48.093511,emergencia_obstetrica,1,0,24,2,False,pendente
-21,Paciente_1053,Samambaia,-15.905176,-48.090019,pos_parto,4,14,18,3,False,pendente
-22,Paciente_5889,Samambaia,-15.836349,-48.063843,emergencia_obstetrica,1,0,24,3,False,pendente
-23,Paciente_9837,Gama,-16.010562,-48.08503,violencia_domestica,2,0,24,3,False,pendente
-24,Paciente_6947,Ceilândia,-15.811484,-48.112812,emergencia_obstetrica,1,0,24,2,False,pendente
-25,Paciente_2403,Taguatinga,-15.859624,-48.033719,emergencia_obstetrica,1,0,24,3,False,pendente
-26,Paciente_3103,Plano Piloto,-15.748098,-47.881902,violencia_domestica,2,0,24,3,False,pendente
-27,Paciente_4470,Plano Piloto,-15.735015,-47.963187,pos_parto,4,14,18,3,False,pendente
-28,Paciente_8177,Taguatinga,-15.820323,-48.06246,medicamento_hormonal,3,8,18,3,True,pendente
-29,Paciente_1344,Plano Piloto,-15.8176,-47.95723,medicamento_hormonal,3,8,18,3,True,pendente
-30,Paciente_1964,Gama,-16.033293,-48.080987,emergencia_obstetrica,1,0,24,1,False,pendente
-31,Paciente_9423,Ceilândia,-15.786966,-48.083129,emergencia_obstetrica,1,0,24,1,False,pendente
-32,Paciente_8744,Samambaia,-15.860582,-48.107661,violencia_domestica,2,0,24,1,False,pendente
-33,Paciente_8062,Plano Piloto,-15.74895,-47.960659,emergencia_obstetrica,1,0,24,2,False,pendente
-34,Paciente_2612,Plano Piloto,-15.78859,-47.893316,emergencia_obstetrica,1,0,24,1,False,pendente
-35,Paciente_5073,Plano Piloto,-15.756879,-47.899641,emergencia_obstetrica,1,0,24,1,False,pendente
-36,Paciente_5563,Taguatinga,-15.830923,-48.077989,violencia_domestica,2,0,24,2,False,pendente
-37,Paciente_1828,Taguatinga,-15.810631,-48.081877,emergencia_obstetrica,1,0,24,3,False,pendente
-38,Paciente_3724,Gama,-15.996938,-48.03606,violencia_domestica,2,0,24,2,False,pendente
-39,Paciente_3697,Plano Piloto,-15.781564,-47.893235,emergencia_obstetrica,1,0,24,2,False,pendente
-40,Paciente_5673,Ceilândia,-15.780575,-48.130684,pos_parto,4,14,18,2,False,pendente
+1,Paciente_4447,Gama,-16.009042,-48.055217,emergencia_obstetrica,1,0,24,1,False,pendente
+2,Paciente_7005,Plano Piloto,-15.799537,-47.942825,pos_parto,4,14,18,2,False,pendente
+3,Paciente_6286,Ceilândia,-15.823223,-48.090508,pos_parto,4,14,18,2,False,pendente
+4,Paciente_9805,Plano Piloto,-15.806678,-47.976268,violencia_domestica,2,0,24,2,False,pendente
+5,Paciente_2472,Samambaia,-15.904855,-48.048246,pos_parto,4,14,18,1,False,pendente
+6,Paciente_1187,Samambaia,-15.843505,-48.10917,emergencia_obstetrica,1,0,24,1,False,pendente
+7,Paciente_6386,Taguatinga,-15.818042,-48.057852,medicamento_hormonal,3,8,18,2,True,pendente
+8,Paciente_3071,Ceilândia,-15.813845,-48.073436,violencia_domestica,2,0,24,1,False,pendente
+9,Paciente_9831,Samambaia,-15.890566,-48.075891,emergencia_obstetrica,1,0,24,3,False,pendente
+10,Paciente_3749,Ceilândia,-15.82558,-48.125967,emergencia_obstetrica,1,0,24,2,False,pendente
+11,Paciente_2871,Taguatinga,-15.815538,-48.064879,emergencia_obstetrica,1,0,24,3,False,pendente
+12,Paciente_5304,Ceilândia,-15.781419,-48.073371,medicamento_hormonal,3,8,18,2,True,pendente
+13,Paciente_4953,Plano Piloto,-15.79834,-47.920432,emergencia_obstetrica,1,0,24,3,False,pendente
+14,Paciente_4758,Plano Piloto,-15.756459,-47.933647,medicamento_hormonal,3,8,18,2,True,pendente
+15,Paciente_9375,Taguatinga,-15.814704,-48.041966,emergencia_obstetrica,1,0,24,2,False,pendente
+16,Paciente_1827,Gama,-15.987768,-48.074836,pos_parto,4,14,18,2,False,pendente
+17,Paciente_4571,Samambaia,-15.901975,-48.104203,medicamento_hormonal,3,8,18,3,True,pendente
+18,Paciente_5261,Gama,-16.00945,-48.084798,medicamento_hormonal,3,8,18,1,True,pendente
+19,Paciente_6237,Gama,-16.006963,-48.043079,pos_parto,4,14,18,1,False,pendente
+20,Paciente_6029,Taguatinga,-15.804274,-48.071409,pos_parto,4,14,18,3,False,pendente
+21,Paciente_3032,Samambaia,-15.882837,-48.073163,pos_parto,4,14,18,2,False,pendente
+22,Paciente_4806,Ceilândia,-15.848196,-48.133642,emergencia_obstetrica,1,0,24,1,False,pendente
+23,Paciente_4403,Samambaia,-15.87513,-48.113882,medicamento_hormonal,3,8,18,1,True,pendente
+24,Paciente_5726,Samambaia,-15.865827,-48.091833,medicamento_hormonal,3,8,18,1,True,pendente
+25,Paciente_8880,Samambaia,-15.865386,-48.104009,medicamento_hormonal,3,8,18,1,True,pendente
+26,Paciente_4532,Ceilândia,-15.804979,-48.125007,violencia_domestica,2,0,24,1,False,pendente
+27,Paciente_6109,Samambaia,-15.846156,-48.096601,violencia_domestica,2,0,24,3,False,pendente
+28,Paciente_4457,Ceilândia,-15.796387,-48.082938,medicamento_hormonal,3,8,18,3,True,pendente
+29,Paciente_8512,Taguatinga,-15.85663,-48.082779,medicamento_hormonal,3,8,18,1,True,pendente
+30,Paciente_4490,Samambaia,-15.874778,-48.105237,violencia_domestica,2,0,24,3,False,pendente
+31,Paciente_7667,Ceilândia,-15.807372,-48.14413,pos_parto,4,14,18,1,False,pendente
+32,Paciente_7104,Ceilândia,-15.832367,-48.137584,emergencia_obstetrica,1,0,24,1,False,pendente
+33,Paciente_6822,Taguatinga,-15.805511,-48.06989,violencia_domestica,2,0,24,1,False,pendente
+34,Paciente_8806,Plano Piloto,-15.825853,-47.978805,medicamento_hormonal,3,8,18,3,True,pendente
+35,Paciente_4360,Ceilândia,-15.842232,-48.09129,violencia_domestica,2,0,24,1,False,pendente
+36,Paciente_3782,Plano Piloto,-15.741892,-47.974402,medicamento_hormonal,3,8,18,2,True,pendente
+37,Paciente_7080,Samambaia,-15.843035,-48.1042,emergencia_obstetrica,1,0,24,3,False,pendente
+38,Paciente_9930,Taguatinga,-15.80735,-48.039353,medicamento_hormonal,3,8,18,2,True,pendente
+39,Paciente_1244,Taguatinga,-15.809432,-48.049552,violencia_domestica,2,0,24,2,False,pendente
+40,Paciente_3453,Plano Piloto,-15.729888,-47.883185,pos_parto,4,14,18,1,False,pendente
+41,Paciente_8989,Taguatinga,-15.816185,-48.078022,pos_parto,4,14,18,3,False,pendente
+42,Paciente_7693,Samambaia,-15.894889,-48.060561,pos_parto,4,14,18,1,False,pendente
+43,Paciente_1001,Taguatinga,-15.858217,-48.069415,emergencia_obstetrica,1,0,24,3,False,pendente
+44,Paciente_9410,Plano Piloto,-15.75705,-47.938071,medicamento_hormonal,3,8,18,1,True,pendente
+45,Paciente_3338,Plano Piloto,-15.733948,-47.935582,emergencia_obstetrica,1,0,24,1,False,pendente
+46,Paciente_4001,Taguatinga,-15.817225,-48.080451,emergencia_obstetrica,1,0,24,2,False,pendente
+47,Paciente_2331,Gama,-16.015203,-48.064651,pos_parto,4,14,18,2,False,pendente
+48,Paciente_5864,Samambaia,-15.886341,-48.107975,violencia_domestica,2,0,24,1,False,pendente
+49,Paciente_3657,Plano Piloto,-15.823267,-47.959234,pos_parto,4,14,18,2,False,pendente
+50,Paciente_4245,Samambaia,-15.871919,-48.070548,pos_parto,4,14,18,1,False,pendente
+51,Paciente_2337,Gama,-16.002456,-48.040617,violencia_domestica,2,0,24,1,False,pendente
+52,Paciente_6003,Samambaia,-15.860669,-48.091072,emergencia_obstetrica,1,0,24,1,False,pendente
+53,Paciente_5897,Gama,-16.044751,-48.060204,medicamento_hormonal,3,8,18,2,True,pendente
+54,Paciente_7481,Samambaia,-15.879593,-48.090506,pos_parto,4,14,18,2,False,pendente
+55,Paciente_7505,Plano Piloto,-15.776478,-47.940692,medicamento_hormonal,3,8,18,2,True,pendente
+56,Paciente_1204,Taguatinga,-15.853941,-48.028038,pos_parto,4,14,18,3,False,pendente
+57,Paciente_8280,Samambaia,-15.884897,-48.118958,medicamento_hormonal,3,8,18,3,True,pendente
+58,Paciente_8841,Samambaia,-15.841904,-48.056082,pos_parto,4,14,18,1,False,pendente
+59,Paciente_4535,Samambaia,-15.888395,-48.077234,violencia_domestica,2,0,24,1,False,pendente
+60,Paciente_3301,Gama,-16.006355,-48.056646,emergencia_obstetrica,1,0,24,2,False,pendente
+61,Paciente_6750,Ceilândia,-15.841185,-48.08679,emergencia_obstetrica,1,0,24,3,False,pendente
+62,Paciente_1580,Taguatinga,-15.847208,-48.084341,violencia_domestica,2,0,24,1,False,pendente
+63,Paciente_7920,Ceilândia,-15.827409,-48.121362,pos_parto,4,14,18,2,False,pendente
+64,Paciente_7926,Plano Piloto,-15.760432,-47.966646,violencia_domestica,2,0,24,1,False,pendente
+65,Paciente_7134,Gama,-15.991996,-48.050046,emergencia_obstetrica,1,0,24,3,False,pendente
+66,Paciente_2667,Taguatinga,-15.834053,-48.041861,emergencia_obstetrica,1,0,24,1,False,pendente
+67,Paciente_2093,Plano Piloto,-15.759449,-47.888174,violencia_domestica,2,0,24,1,False,pendente
+68,Paciente_5692,Ceilândia,-15.827523,-48.102869,medicamento_hormonal,3,8,18,1,True,pendente
+69,Paciente_1969,Gama,-16.037113,-48.090406,emergencia_obstetrica,1,0,24,3,False,pendente
+70,Paciente_3522,Ceilândia,-15.835481,-48.0728,emergencia_obstetrica,1,0,24,1,False,pendente
+71,Paciente_9913,Plano Piloto,-15.817183,-47.960866,violencia_domestica,2,0,24,1,False,pendente
+72,Paciente_6856,Ceilândia,-15.833319,-48.087377,pos_parto,4,14,18,3,False,pendente
+73,Paciente_1524,Gama,-16.02481,-48.063406,violencia_domestica,2,0,24,2,False,pendente
+74,Paciente_4866,Gama,-16.044158,-48.034868,violencia_domestica,2,0,24,2,False,pendente
+75,Paciente_1596,Gama,-16.036672,-48.093343,violencia_domestica,2,0,24,1,False,pendente
+76,Paciente_9364,Plano Piloto,-15.739645,-47.891697,violencia_domestica,2,0,24,2,False,pendente
+77,Paciente_2397,Samambaia,-15.878037,-48.112174,violencia_domestica,2,0,24,3,False,pendente
+78,Paciente_7995,Samambaia,-15.858967,-48.107893,medicamento_hormonal,3,8,18,3,True,pendente
+79,Paciente_4046,Gama,-16.030773,-48.05282,emergencia_obstetrica,1,0,24,2,False,pendente
+80,Paciente_8865,Taguatinga,-15.859156,-48.084308,violencia_domestica,2,0,24,1,False,pendente
+81,Paciente_5231,Ceilândia,-15.821691,-48.074599,medicamento_hormonal,3,8,18,3,True,pendente
+82,Paciente_6576,Samambaia,-15.857591,-48.085924,medicamento_hormonal,3,8,18,1,True,pendente
+83,Paciente_9131,Plano Piloto,-15.827888,-47.890909,pos_parto,4,14,18,2,False,pendente
+84,Paciente_8482,Samambaia,-15.886671,-48.117999,medicamento_hormonal,3,8,18,1,True,pendente
+85,Paciente_2972,Gama,-16.020479,-48.045328,medicamento_hormonal,3,8,18,2,True,pendente
+86,Paciente_9994,Plano Piloto,-15.773378,-47.898536,medicamento_hormonal,3,8,18,2,True,pendente
+87,Paciente_3079,Samambaia,-15.865346,-48.079049,violencia_domestica,2,0,24,2,False,pendente
+88,Paciente_1721,Samambaia,-15.898955,-48.064997,emergencia_obstetrica,1,0,24,2,False,pendente
+89,Paciente_9923,Samambaia,-15.871695,-48.081,medicamento_hormonal,3,8,18,2,True,pendente
+90,Paciente_7609,Taguatinga,-15.837758,-48.054729,violencia_domestica,2,0,24,2,False,pendente
+91,Paciente_6423,Samambaia,-15.911021,-48.065608,violencia_domestica,2,0,24,3,False,pendente
+92,Paciente_6367,Taguatinga,-15.852948,-48.035209,emergencia_obstetrica,1,0,24,2,False,pendente
+93,Paciente_1355,Gama,-16.03784,-48.035311,violencia_domestica,2,0,24,3,False,pendente
+94,Paciente_1653,Gama,-16.040141,-48.079843,violencia_domestica,2,0,24,2,False,pendente
+95,Paciente_5329,Taguatinga,-15.833385,-48.076331,emergencia_obstetrica,1,0,24,2,False,pendente
+96,Paciente_8604,Samambaia,-15.851678,-48.087534,medicamento_hormonal,3,8,18,2,True,pendente
+97,Paciente_4450,Taguatinga,-15.81163,-48.070619,pos_parto,4,14,18,3,False,pendente
+98,Paciente_1207,Taguatinga,-15.831444,-48.04833,pos_parto,4,14,18,3,False,pendente
+99,Paciente_4705,Taguatinga,-15.826066,-48.041228,medicamento_hormonal,3,8,18,2,True,pendente
+100,Paciente_7516,Plano Piloto,-15.754062,-47.974871,emergencia_obstetrica,1,0,24,2,False,pendente
+101,Paciente_2307,Taguatinga,-15.807859,-48.053993,emergencia_obstetrica,1,0,24,2,False,pendente
+102,Paciente_3371,Gama,-16.000672,-48.074994,medicamento_hormonal,3,8,18,2,True,pendente
+103,Paciente_6529,Samambaia,-15.87216,-48.092074,pos_parto,4,14,18,2,False,pendente
+104,Paciente_3584,Plano Piloto,-15.79425,-47.903385,pos_parto,4,14,18,2,False,pendente
+105,Paciente_2667,Plano Piloto,-15.767846,-47.90081,pos_parto,4,14,18,3,False,pendente
+106,Paciente_9876,Samambaia,-15.846171,-48.052725,pos_parto,4,14,18,3,False,pendente
+107,Paciente_4841,Samambaia,-15.89695,-48.083131,violencia_domestica,2,0,24,2,False,pendente
+108,Paciente_8133,Taguatinga,-15.841355,-48.062763,violencia_domestica,2,0,24,2,False,pendente
+109,Paciente_9018,Taguatinga,-15.829883,-48.045138,violencia_domestica,2,0,24,2,False,pendente
+110,Paciente_5181,Gama,-16.043763,-48.083203,pos_parto,4,14,18,1,False,pendente
+111,Paciente_3596,Plano Piloto,-15.751621,-47.900452,emergencia_obstetrica,1,0,24,1,False,pendente
+112,Paciente_6664,Plano Piloto,-15.791419,-47.880771,medicamento_hormonal,3,8,18,2,True,pendente
+113,Paciente_2183,Plano Piloto,-15.814902,-47.971645,medicamento_hormonal,3,8,18,1,True,pendente
+114,Paciente_3794,Gama,-16.001457,-48.073766,emergencia_obstetrica,1,0,24,3,False,pendente
+115,Paciente_9431,Samambaia,-15.851581,-48.048599,violencia_domestica,2,0,24,1,False,pendente
+116,Paciente_3560,Ceilândia,-15.789429,-48.103742,medicamento_hormonal,3,8,18,1,True,pendente
+117,Paciente_1314,Samambaia,-15.855848,-48.087804,emergencia_obstetrica,1,0,24,3,False,pendente
+118,Paciente_3365,Samambaia,-15.869621,-48.114622,pos_parto,4,14,18,1,False,pendente
+119,Paciente_5870,Gama,-16.03395,-48.070646,violencia_domestica,2,0,24,3,False,pendente
+120,Paciente_2103,Taguatinga,-15.8213,-48.084524,pos_parto,4,14,18,1,False,pendente
+121,Paciente_9411,Taguatinga,-15.848374,-48.0748,medicamento_hormonal,3,8,18,3,True,pendente
+122,Paciente_5870,Samambaia,-15.902255,-48.064263,pos_parto,4,14,18,1,False,pendente
+123,Paciente_3572,Ceilândia,-15.831482,-48.146844,medicamento_hormonal,3,8,18,1,True,pendente
+124,Paciente_9450,Ceilândia,-15.840431,-48.097244,emergencia_obstetrica,1,0,24,3,False,pendente
+125,Paciente_6819,Taguatinga,-15.843959,-48.039906,emergencia_obstetrica,1,0,24,2,False,pendente
+126,Paciente_2222,Taguatinga,-15.833396,-48.048155,violencia_domestica,2,0,24,3,False,pendente
+127,Paciente_2042,Ceilândia,-15.788658,-48.144165,violencia_domestica,2,0,24,3,False,pendente
+128,Paciente_2544,Ceilândia,-15.822216,-48.085286,pos_parto,4,14,18,3,False,pendente
+129,Paciente_3145,Samambaia,-15.895752,-48.085745,emergencia_obstetrica,1,0,24,2,False,pendente
+130,Paciente_8997,Ceilândia,-15.815678,-48.151658,violencia_domestica,2,0,24,1,False,pendente
+131,Paciente_7589,Samambaia,-15.90109,-48.098371,violencia_domestica,2,0,24,1,False,pendente
+132,Paciente_7951,Taguatinga,-15.809212,-48.05514,emergencia_obstetrica,1,0,24,1,False,pendente
+133,Paciente_8910,Taguatinga,-15.861072,-48.036341,violencia_domestica,2,0,24,1,False,pendente
+134,Paciente_8110,Ceilândia,-15.836393,-48.142443,medicamento_hormonal,3,8,18,1,True,pendente
+135,Paciente_4641,Gama,-15.993721,-48.07915,emergencia_obstetrica,1,0,24,3,False,pendente
+136,Paciente_6835,Taguatinga,-15.839112,-48.081445,medicamento_hormonal,3,8,18,1,True,pendente
+137,Paciente_1514,Plano Piloto,-15.731172,-47.961373,medicamento_hormonal,3,8,18,2,True,pendente
+138,Paciente_9596,Plano Piloto,-15.77991,-47.978708,emergencia_obstetrica,1,0,24,2,False,pendente
+139,Paciente_8305,Ceilândia,-15.79457,-48.098392,violencia_domestica,2,0,24,1,False,pendente
+140,Paciente_7848,Taguatinga,-15.823733,-48.05883,emergencia_obstetrica,1,0,24,3,False,pendente
+141,Paciente_7913,Taguatinga,-15.81033,-48.053042,pos_parto,4,14,18,3,False,pendente
+142,Paciente_2775,Ceilândia,-15.783288,-48.143495,medicamento_hormonal,3,8,18,1,True,pendente
+143,Paciente_6125,Ceilândia,-15.807168,-48.107654,emergencia_obstetrica,1,0,24,1,False,pendente
+144,Paciente_3699,Taguatinga,-15.86285,-48.036638,violencia_domestica,2,0,24,1,False,pendente
+145,Paciente_2832,Gama,-15.991993,-48.071148,pos_parto,4,14,18,3,False,pendente
+146,Paciente_8275,Gama,-16.03008,-48.087684,pos_parto,4,14,18,3,False,pendente
+147,Paciente_3912,Taguatinga,-15.81146,-48.028677,pos_parto,4,14,18,1,False,pendente
+148,Paciente_8836,Taguatinga,-15.826619,-48.081306,medicamento_hormonal,3,8,18,2,True,pendente
+149,Paciente_1990,Samambaia,-15.894993,-48.107901,medicamento_hormonal,3,8,18,2,True,pendente
+150,Paciente_5439,Taguatinga,-15.861582,-48.074206,medicamento_hormonal,3,8,18,3,True,pendente
+151,Paciente_4585,Plano Piloto,-15.804948,-47.950403,violencia_domestica,2,0,24,3,False,pendente
+152,Paciente_2843,Ceilândia,-15.853319,-48.113593,violencia_domestica,2,0,24,2,False,pendente
+153,Paciente_8655,Plano Piloto,-15.758826,-47.922829,medicamento_hormonal,3,8,18,2,True,pendente
+154,Paciente_4720,Ceilândia,-15.792657,-48.080496,pos_parto,4,14,18,1,False,pendente
+155,Paciente_2251,Samambaia,-15.868694,-48.118729,pos_parto,4,14,18,3,False,pendente
+156,Paciente_1024,Samambaia,-15.882787,-48.092081,medicamento_hormonal,3,8,18,2,True,pendente
+157,Paciente_4186,Taguatinga,-15.837191,-48.027071,medicamento_hormonal,3,8,18,1,True,pendente
+158,Paciente_4306,Plano Piloto,-15.730585,-47.927558,emergencia_obstetrica,1,0,24,1,False,pendente
+159,Paciente_1068,Ceilândia,-15.80813,-48.081444,pos_parto,4,14,18,3,False,pendente
+160,Paciente_8044,Ceilândia,-15.823185,-48.150476,pos_parto,4,14,18,2,False,pendente
+161,Paciente_9028,Gama,-16.014048,-48.053989,pos_parto,4,14,18,3,False,pendente
+162,Paciente_4829,Ceilândia,-15.806845,-48.133467,medicamento_hormonal,3,8,18,3,True,pendente
+163,Paciente_4536,Ceilândia,-15.844339,-48.094965,emergencia_obstetrica,1,0,24,1,False,pendente
+164,Paciente_8644,Ceilândia,-15.802835,-48.087766,emergencia_obstetrica,1,0,24,1,False,pendente
+165,Paciente_8321,Taguatinga,-15.845282,-48.07574,pos_parto,4,14,18,2,False,pendente
+166,Paciente_8308,Ceilândia,-15.853497,-48.11892,medicamento_hormonal,3,8,18,3,True,pendente
+167,Paciente_8037,Ceilândia,-15.818193,-48.088664,pos_parto,4,14,18,2,False,pendente
+168,Paciente_3512,Plano Piloto,-15.751978,-47.931305,violencia_domestica,2,0,24,3,False,pendente
+169,Paciente_1318,Plano Piloto,-15.814094,-47.976414,medicamento_hormonal,3,8,18,1,True,pendente
+170,Paciente_2373,Ceilândia,-15.823034,-48.140211,pos_parto,4,14,18,1,False,pendente
+171,Paciente_1281,Ceilândia,-15.850487,-48.11872,pos_parto,4,14,18,3,False,pendente
+172,Paciente_6877,Samambaia,-15.889171,-48.08357,pos_parto,4,14,18,2,False,pendente
+173,Paciente_7859,Taguatinga,-15.815533,-48.033139,pos_parto,4,14,18,3,False,pendente
+174,Paciente_2841,Samambaia,-15.842485,-48.096836,emergencia_obstetrica,1,0,24,1,False,pendente
+175,Paciente_5700,Gama,-16.010767,-48.067718,medicamento_hormonal,3,8,18,1,True,pendente
+176,Paciente_5165,Taguatinga,-15.825199,-48.065003,violencia_domestica,2,0,24,3,False,pendente
+177,Paciente_6299,Gama,-16.025775,-48.034415,emergencia_obstetrica,1,0,24,3,False,pendente
+178,Paciente_6117,Plano Piloto,-15.814692,-47.916735,emergencia_obstetrica,1,0,24,3,False,pendente
+179,Paciente_6661,Taguatinga,-15.826478,-48.037619,medicamento_hormonal,3,8,18,1,True,pendente
+180,Paciente_4083,Taguatinga,-15.855955,-48.041378,emergencia_obstetrica,1,0,24,2,False,pendente
+181,Paciente_3828,Plano Piloto,-15.804701,-47.909429,pos_parto,4,14,18,2,False,pendente
+182,Paciente_8355,Samambaia,-15.847794,-48.059558,emergencia_obstetrica,1,0,24,3,False,pendente
+183,Paciente_9007,Samambaia,-15.884149,-48.116228,pos_parto,4,14,18,1,False,pendente
+184,Paciente_1996,Samambaia,-15.912453,-48.058543,medicamento_hormonal,3,8,18,3,True,pendente
+185,Paciente_9540,Taguatinga,-15.826493,-48.063667,medicamento_hormonal,3,8,18,2,True,pendente
+186,Paciente_7384,Gama,-15.997013,-48.088921,emergencia_obstetrica,1,0,24,2,False,pendente
+187,Paciente_6747,Taguatinga,-15.825824,-48.054666,violencia_domestica,2,0,24,3,False,pendente
+188,Paciente_8574,Taguatinga,-15.824732,-48.077557,violencia_domestica,2,0,24,3,False,pendente
+189,Paciente_1986,Samambaia,-15.858169,-48.076414,violencia_domestica,2,0,24,1,False,pendente
+190,Paciente_1377,Gama,-16.025069,-48.035751,emergencia_obstetrica,1,0,24,2,False,pendente
+191,Paciente_8948,Ceilândia,-15.832198,-48.136073,violencia_domestica,2,0,24,1,False,pendente
+192,Paciente_2379,Ceilândia,-15.816886,-48.144422,violencia_domestica,2,0,24,3,False,pendente
+193,Paciente_4445,Taguatinga,-15.809882,-48.083247,violencia_domestica,2,0,24,2,False,pendente
+194,Paciente_8488,Samambaia,-15.902887,-48.086911,medicamento_hormonal,3,8,18,1,True,pendente
+195,Paciente_8057,Samambaia,-15.904347,-48.083112,violencia_domestica,2,0,24,1,False,pendente
+196,Paciente_9719,Gama,-16.011885,-48.060329,violencia_domestica,2,0,24,2,False,pendente
+197,Paciente_1877,Samambaia,-15.881069,-48.059568,medicamento_hormonal,3,8,18,2,True,pendente
+198,Paciente_6393,Plano Piloto,-15.781692,-47.897808,violencia_domestica,2,0,24,3,False,pendente
+199,Paciente_3425,Taguatinga,-15.829861,-48.07567,emergencia_obstetrica,1,0,24,1,False,pendente
+200,Paciente_7579,Ceilândia,-15.807991,-48.087939,emergencia_obstetrica,1,0,24,1,False,pendente
+201,Paciente_1743,Ceilândia,-15.82262,-48.129115,emergencia_obstetrica,1,0,24,2,False,pendente
+202,Paciente_1546,Plano Piloto,-15.793294,-47.93651,emergencia_obstetrica,1,0,24,3,False,pendente
+203,Paciente_3674,Ceilândia,-15.841401,-48.09945,pos_parto,4,14,18,2,False,pendente
+204,Paciente_5859,Plano Piloto,-15.744898,-47.910976,pos_parto,4,14,18,3,False,pendente
+205,Paciente_7190,Gama,-16.01286,-48.065052,emergencia_obstetrica,1,0,24,1,False,pendente
+206,Paciente_9824,Samambaia,-15.908483,-48.096303,emergencia_obstetrica,1,0,24,3,False,pendente
+207,Paciente_6593,Gama,-16.031909,-48.074908,emergencia_obstetrica,1,0,24,2,False,pendente
+208,Paciente_8057,Taguatinga,-15.844272,-48.075786,medicamento_hormonal,3,8,18,1,True,pendente
+209,Paciente_8111,Plano Piloto,-15.768837,-47.937591,pos_parto,4,14,18,3,False,pendente
+210,Paciente_8916,Ceilândia,-15.854264,-48.140673,medicamento_hormonal,3,8,18,1,True,pendente
+211,Paciente_8670,Plano Piloto,-15.767045,-47.962324,emergencia_obstetrica,1,0,24,3,False,pendente
+212,Paciente_4078,Samambaia,-15.862844,-48.051643,pos_parto,4,14,18,3,False,pendente
+213,Paciente_5613,Ceilândia,-15.848652,-48.116413,pos_parto,4,14,18,3,False,pendente
+214,Paciente_1135,Gama,-15.994484,-48.041184,emergencia_obstetrica,1,0,24,1,False,pendente
+215,Paciente_4395,Plano Piloto,-15.780151,-47.972484,medicamento_hormonal,3,8,18,1,True,pendente
+216,Paciente_9144,Samambaia,-15.849622,-48.048165,emergencia_obstetrica,1,0,24,3,False,pendente
+217,Paciente_6721,Gama,-16.016947,-48.057192,emergencia_obstetrica,1,0,24,2,False,pendente
+218,Paciente_8926,Samambaia,-15.901569,-48.05642,medicamento_hormonal,3,8,18,2,True,pendente
+219,Paciente_5006,Gama,-15.990175,-48.080236,violencia_domestica,2,0,24,1,False,pendente
+220,Paciente_9241,Taguatinga,-15.805894,-48.072908,medicamento_hormonal,3,8,18,2,True,pendente
+221,Paciente_5804,Samambaia,-15.875532,-48.080324,emergencia_obstetrica,1,0,24,2,False,pendente
+222,Paciente_7102,Plano Piloto,-15.775775,-47.930512,emergencia_obstetrica,1,0,24,3,False,pendente
+223,Paciente_2157,Samambaia,-15.847124,-48.058654,pos_parto,4,14,18,3,False,pendente
+224,Paciente_2617,Samambaia,-15.875154,-48.095626,medicamento_hormonal,3,8,18,3,True,pendente
+225,Paciente_9193,Gama,-16.044902,-48.047008,emergencia_obstetrica,1,0,24,2,False,pendente
+226,Paciente_7234,Plano Piloto,-15.79817,-47.91963,medicamento_hormonal,3,8,18,1,True,pendente
+227,Paciente_4298,Taguatinga,-15.849611,-48.046842,violencia_domestica,2,0,24,1,False,pendente
+228,Paciente_7259,Gama,-16.038992,-48.049196,pos_parto,4,14,18,3,False,pendente
+229,Paciente_1870,Taguatinga,-15.83182,-48.0278,violencia_domestica,2,0,24,1,False,pendente
+230,Paciente_1553,Plano Piloto,-15.767545,-47.89265,violencia_domestica,2,0,24,2,False,pendente
+231,Paciente_1416,Plano Piloto,-15.765893,-47.892295,emergencia_obstetrica,1,0,24,3,False,pendente
+232,Paciente_3087,Gama,-16.043062,-48.036804,medicamento_hormonal,3,8,18,1,True,pendente
+233,Paciente_3869,Taguatinga,-15.810142,-48.0545,medicamento_hormonal,3,8,18,3,True,pendente
+234,Paciente_8420,Samambaia,-15.861952,-48.102668,violencia_domestica,2,0,24,1,False,pendente
+235,Paciente_5303,Ceilândia,-15.786027,-48.089524,violencia_domestica,2,0,24,3,False,pendente
+236,Paciente_7009,Plano Piloto,-15.816243,-47.958632,emergencia_obstetrica,1,0,24,1,False,pendente
+237,Paciente_6312,Gama,-15.997946,-48.089609,emergencia_obstetrica,1,0,24,1,False,pendente
+238,Paciente_2052,Ceilândia,-15.842867,-48.107654,medicamento_hormonal,3,8,18,1,True,pendente
+239,Paciente_6853,Taguatinga,-15.851709,-48.028881,violencia_domestica,2,0,24,3,False,pendente
+240,Paciente_3559,Taguatinga,-15.822015,-48.05945,violencia_domestica,2,0,24,3,False,pendente
+241,Paciente_4236,Ceilândia,-15.849866,-48.147675,pos_parto,4,14,18,1,False,pendente
+242,Paciente_1266,Plano Piloto,-15.735879,-47.965443,violencia_domestica,2,0,24,1,False,pendente
+243,Paciente_5886,Ceilândia,-15.811899,-48.089663,violencia_domestica,2,0,24,1,False,pendente
+244,Paciente_1745,Taguatinga,-15.825858,-48.082824,violencia_domestica,2,0,24,1,False,pendente
+245,Paciente_7135,Ceilândia,-15.839533,-48.096544,violencia_domestica,2,0,24,2,False,pendente
+246,Paciente_8139,Plano Piloto,-15.804744,-47.912522,pos_parto,4,14,18,3,False,pendente
+247,Paciente_4954,Plano Piloto,-15.767034,-47.881601,violencia_domestica,2,0,24,1,False,pendente
+248,Paciente_7518,Plano Piloto,-15.756523,-47.975288,violencia_domestica,2,0,24,1,False,pendente
+249,Paciente_3597,Samambaia,-15.896197,-48.059275,medicamento_hormonal,3,8,18,3,True,pendente
+250,Paciente_4093,Samambaia,-15.853228,-48.089399,violencia_domestica,2,0,24,1,False,pendente
+251,Paciente_5407,Samambaia,-15.865768,-48.08414,violencia_domestica,2,0,24,2,False,pendente
+252,Paciente_6714,Ceilândia,-15.805649,-48.136864,pos_parto,4,14,18,3,False,pendente
+253,Paciente_9217,Gama,-16.01293,-48.047793,emergencia_obstetrica,1,0,24,2,False,pendente
+254,Paciente_7197,Taguatinga,-15.84415,-48.083507,medicamento_hormonal,3,8,18,1,True,pendente
+255,Paciente_2803,Samambaia,-15.844118,-48.080707,medicamento_hormonal,3,8,18,2,True,pendente
+256,Paciente_2726,Ceilândia,-15.839095,-48.116079,emergencia_obstetrica,1,0,24,3,False,pendente
+257,Paciente_7144,Taguatinga,-15.856401,-48.043046,pos_parto,4,14,18,3,False,pendente
+258,Paciente_1354,Ceilândia,-15.833365,-48.102358,pos_parto,4,14,18,3,False,pendente
+259,Paciente_9022,Gama,-15.990061,-48.093276,emergencia_obstetrica,1,0,24,3,False,pendente
+260,Paciente_2203,Plano Piloto,-15.773236,-47.930912,violencia_domestica,2,0,24,1,False,pendente
+261,Paciente_5013,Plano Piloto,-15.752277,-47.96157,violencia_domestica,2,0,24,3,False,pendente
+262,Paciente_3929,Samambaia,-15.898282,-48.089201,emergencia_obstetrica,1,0,24,2,False,pendente
+263,Paciente_9818,Gama,-16.019675,-48.058926,pos_parto,4,14,18,2,False,pendente
+264,Paciente_2160,Ceilândia,-15.808351,-48.121394,medicamento_hormonal,3,8,18,3,True,pendente
+265,Paciente_9861,Plano Piloto,-15.817243,-47.936407,pos_parto,4,14,18,2,False,pendente
+266,Paciente_5993,Taguatinga,-15.84246,-48.06731,medicamento_hormonal,3,8,18,2,True,pendente
+267,Paciente_1397,Plano Piloto,-15.774123,-47.959334,violencia_domestica,2,0,24,1,False,pendente
+268,Paciente_3988,Samambaia,-15.897996,-48.096022,violencia_domestica,2,0,24,3,False,pendente
+269,Paciente_6831,Samambaia,-15.907624,-48.053108,emergencia_obstetrica,1,0,24,1,False,pendente
+270,Paciente_7386,Taguatinga,-15.805744,-48.075837,medicamento_hormonal,3,8,18,3,True,pendente
+271,Paciente_8010,Samambaia,-15.870772,-48.071971,pos_parto,4,14,18,2,False,pendente
+272,Paciente_5632,Gama,-16.018123,-48.038152,emergencia_obstetrica,1,0,24,1,False,pendente
+273,Paciente_2162,Samambaia,-15.8794,-48.10652,medicamento_hormonal,3,8,18,2,True,pendente
+274,Paciente_1518,Gama,-16.041511,-48.091749,pos_parto,4,14,18,3,False,pendente
+275,Paciente_3182,Taguatinga,-15.823553,-48.030751,emergencia_obstetrica,1,0,24,2,False,pendente
+276,Paciente_1329,Samambaia,-15.88938,-48.06565,emergencia_obstetrica,1,0,24,3,False,pendente
+277,Paciente_8820,Gama,-15.988181,-48.078172,violencia_domestica,2,0,24,3,False,pendente
+278,Paciente_4828,Samambaia,-15.913595,-48.087176,violencia_domestica,2,0,24,1,False,pendente
+279,Paciente_7078,Samambaia,-15.864858,-48.119233,pos_parto,4,14,18,2,False,pendente
+280,Paciente_3130,Taguatinga,-15.857716,-48.074199,pos_parto,4,14,18,2,False,pendente
+281,Paciente_6929,Plano Piloto,-15.800406,-47.973296,emergencia_obstetrica,1,0,24,1,False,pendente
+282,Paciente_3677,Samambaia,-15.840065,-48.119091,pos_parto,4,14,18,2,False,pendente
+283,Paciente_5954,Taguatinga,-15.807685,-48.06282,violencia_domestica,2,0,24,2,False,pendente
+284,Paciente_2347,Gama,-16.011144,-48.075443,emergencia_obstetrica,1,0,24,2,False,pendente
+285,Paciente_8410,Ceilândia,-15.843417,-48.091995,medicamento_hormonal,3,8,18,3,True,pendente
+286,Paciente_5946,Taguatinga,-15.832632,-48.031971,medicamento_hormonal,3,8,18,3,True,pendente
+287,Paciente_2753,Ceilândia,-15.813015,-48.103602,pos_parto,4,14,18,2,False,pendente
+288,Paciente_9455,Ceilândia,-15.843934,-48.111495,pos_parto,4,14,18,2,False,pendente
+289,Paciente_7718,Gama,-16.033796,-48.07604,emergencia_obstetrica,1,0,24,2,False,pendente
+290,Paciente_5014,Samambaia,-15.84127,-48.051219,medicamento_hormonal,3,8,18,1,True,pendente
+291,Paciente_8032,Samambaia,-15.841394,-48.074291,medicamento_hormonal,3,8,18,3,True,pendente
+292,Paciente_9655,Samambaia,-15.890542,-48.072529,pos_parto,4,14,18,1,False,pendente
+293,Paciente_3290,Taguatinga,-15.857208,-48.040286,medicamento_hormonal,3,8,18,2,True,pendente
+294,Paciente_6339,Gama,-16.000781,-48.041811,emergencia_obstetrica,1,0,24,2,False,pendente
+295,Paciente_1643,Taguatinga,-15.820689,-48.041765,emergencia_obstetrica,1,0,24,3,False,pendente
+296,Paciente_3714,Samambaia,-15.846775,-48.061167,pos_parto,4,14,18,2,False,pendente
+297,Paciente_3830,Gama,-16.042762,-48.071377,pos_parto,4,14,18,3,False,pendente
+298,Paciente_5207,Ceilândia,-15.789171,-48.100627,emergencia_obstetrica,1,0,24,2,False,pendente
+299,Paciente_7459,Gama,-16.001384,-48.040777,emergencia_obstetrica,1,0,24,3,False,pendente
+300,Paciente_4390,Taguatinga,-15.825651,-48.067091,pos_parto,4,14,18,1,False,pendente
+301,Paciente_3482,Plano Piloto,-15.738601,-47.971164,emergencia_obstetrica,1,0,24,3,False,pendente
+302,Paciente_4167,Plano Piloto,-15.790409,-47.908105,pos_parto,4,14,18,3,False,pendente
+303,Paciente_6928,Gama,-15.997687,-48.044592,medicamento_hormonal,3,8,18,1,True,pendente
+304,Paciente_2723,Taguatinga,-15.853269,-48.053746,emergencia_obstetrica,1,0,24,3,False,pendente
+305,Paciente_4431,Taguatinga,-15.853962,-48.059227,violencia_domestica,2,0,24,1,False,pendente
+306,Paciente_5018,Ceilândia,-15.783556,-48.087969,medicamento_hormonal,3,8,18,3,True,pendente
+307,Paciente_1960,Taguatinga,-15.812974,-48.077873,emergencia_obstetrica,1,0,24,3,False,pendente
+308,Paciente_4807,Samambaia,-15.878565,-48.11014,medicamento_hormonal,3,8,18,2,True,pendente
+309,Paciente_3602,Ceilândia,-15.821387,-48.128203,medicamento_hormonal,3,8,18,2,True,pendente
+310,Paciente_9724,Gama,-16.036287,-48.074145,emergencia_obstetrica,1,0,24,2,False,pendente
+311,Paciente_3222,Taguatinga,-15.805175,-48.030771,medicamento_hormonal,3,8,18,3,True,pendente
+312,Paciente_7162,Plano Piloto,-15.793504,-47.965069,emergencia_obstetrica,1,0,24,3,False,pendente
+313,Paciente_3458,Ceilândia,-15.823385,-48.084303,medicamento_hormonal,3,8,18,1,True,pendente
+314,Paciente_1497,Ceilândia,-15.824863,-48.128418,pos_parto,4,14,18,3,False,pendente
+315,Paciente_9395,Gama,-16.040633,-48.058942,violencia_domestica,2,0,24,3,False,pendente
+316,Paciente_9752,Plano Piloto,-15.745172,-47.95436,violencia_domestica,2,0,24,1,False,pendente
+317,Paciente_5467,Ceilândia,-15.848702,-48.139012,violencia_domestica,2,0,24,1,False,pendente
+318,Paciente_2517,Gama,-16.034343,-48.041687,medicamento_hormonal,3,8,18,2,True,pendente
+319,Paciente_8313,Plano Piloto,-15.791506,-47.930501,pos_parto,4,14,18,2,False,pendente
+320,Paciente_5273,Samambaia,-15.880863,-48.097753,violencia_domestica,2,0,24,2,False,pendente
+321,Paciente_8356,Gama,-15.997951,-48.040841,emergencia_obstetrica,1,0,24,2,False,pendente
+322,Paciente_8861,Plano Piloto,-15.79845,-47.967194,medicamento_hormonal,3,8,18,1,True,pendente
+323,Paciente_1446,Ceilândia,-15.855757,-48.118283,medicamento_hormonal,3,8,18,1,True,pendente
+324,Paciente_4620,Plano Piloto,-15.824942,-47.929542,emergencia_obstetrica,1,0,24,2,False,pendente
+325,Paciente_1790,Taguatinga,-15.859794,-48.063895,pos_parto,4,14,18,1,False,pendente
+326,Paciente_5907,Samambaia,-15.888495,-48.048531,emergencia_obstetrica,1,0,24,2,False,pendente
+327,Paciente_6501,Taguatinga,-15.831129,-48.030698,medicamento_hormonal,3,8,18,1,True,pendente
+328,Paciente_1807,Taguatinga,-15.842585,-48.042497,violencia_domestica,2,0,24,1,False,pendente
+329,Paciente_4599,Ceilândia,-15.790709,-48.132169,violencia_domestica,2,0,24,2,False,pendente
+330,Paciente_4841,Taguatinga,-15.81568,-48.068702,violencia_domestica,2,0,24,3,False,pendente
+331,Paciente_8129,Taguatinga,-15.821283,-48.067117,medicamento_hormonal,3,8,18,3,True,pendente
+332,Paciente_2387,Taguatinga,-15.8132,-48.033524,pos_parto,4,14,18,2,False,pendente
+333,Paciente_9874,Gama,-15.997808,-48.074919,medicamento_hormonal,3,8,18,2,True,pendente
+334,Paciente_4254,Samambaia,-15.837472,-48.108513,violencia_domestica,2,0,24,3,False,pendente
+335,Paciente_8152,Plano Piloto,-15.731657,-47.945024,medicamento_hormonal,3,8,18,1,True,pendente
+336,Paciente_5502,Taguatinga,-15.859933,-48.042198,medicamento_hormonal,3,8,18,3,True,pendente
+337,Paciente_3365,Ceilândia,-15.825615,-48.131483,violencia_domestica,2,0,24,2,False,pendente
+338,Paciente_5628,Taguatinga,-15.842924,-48.057247,medicamento_hormonal,3,8,18,2,True,pendente
+339,Paciente_1156,Plano Piloto,-15.743452,-47.953755,pos_parto,4,14,18,1,False,pendente
+340,Paciente_9010,Samambaia,-15.907021,-48.098646,emergencia_obstetrica,1,0,24,3,False,pendente
+341,Paciente_3622,Plano Piloto,-15.809788,-47.940202,emergencia_obstetrica,1,0,24,3,False,pendente
+342,Paciente_6445,Gama,-16.016523,-48.073436,emergencia_obstetrica,1,0,24,2,False,pendente
+343,Paciente_7807,Ceilândia,-15.818653,-48.088085,pos_parto,4,14,18,1,False,pendente
+344,Paciente_8306,Samambaia,-15.850818,-48.108096,medicamento_hormonal,3,8,18,1,True,pendente
+345,Paciente_7935,Samambaia,-15.903925,-48.049945,medicamento_hormonal,3,8,18,1,True,pendente
+346,Paciente_9152,Taguatinga,-15.837949,-48.084092,medicamento_hormonal,3,8,18,2,True,pendente
+347,Paciente_8016,Ceilândia,-15.805551,-48.112408,pos_parto,4,14,18,1,False,pendente
+348,Paciente_7871,Gama,-16.013041,-48.056482,emergencia_obstetrica,1,0,24,1,False,pendente
+349,Paciente_1795,Gama,-16.007648,-48.036124,pos_parto,4,14,18,2,False,pendente
+350,Paciente_2553,Taguatinga,-15.806068,-48.058552,emergencia_obstetrica,1,0,24,1,False,pendente
+351,Paciente_2459,Samambaia,-15.890558,-48.0891,emergencia_obstetrica,1,0,24,2,False,pendente
+352,Paciente_9696,Taguatinga,-15.813713,-48.035613,emergencia_obstetrica,1,0,24,3,False,pendente
+353,Paciente_6761,Samambaia,-15.864272,-48.123847,violencia_domestica,2,0,24,3,False,pendente
+354,Paciente_3201,Ceilândia,-15.803771,-48.077434,emergencia_obstetrica,1,0,24,2,False,pendente
+355,Paciente_5876,Taguatinga,-15.81218,-48.069844,pos_parto,4,14,18,1,False,pendente
+356,Paciente_4500,Plano Piloto,-15.751372,-47.923549,violencia_domestica,2,0,24,1,False,pendente
+357,Paciente_7194,Samambaia,-15.913285,-48.121019,pos_parto,4,14,18,3,False,pendente
+358,Paciente_5345,Gama,-16.021884,-48.084713,emergencia_obstetrica,1,0,24,1,False,pendente
+359,Paciente_2843,Gama,-15.993208,-48.090937,medicamento_hormonal,3,8,18,3,True,pendente
+360,Paciente_6487,Samambaia,-15.847793,-48.076622,medicamento_hormonal,3,8,18,3,True,pendente
+361,Paciente_6345,Plano Piloto,-15.801825,-47.909034,violencia_domestica,2,0,24,2,False,pendente
+362,Paciente_3459,Gama,-15.99149,-48.062461,emergencia_obstetrica,1,0,24,1,False,pendente
+363,Paciente_9289,Plano Piloto,-15.815874,-47.962087,medicamento_hormonal,3,8,18,3,True,pendente
+364,Paciente_1824,Taguatinga,-15.856693,-48.076363,pos_parto,4,14,18,1,False,pendente
+365,Paciente_8407,Taguatinga,-15.82443,-48.049202,violencia_domestica,2,0,24,3,False,pendente
+366,Paciente_2449,Samambaia,-15.912161,-48.073619,violencia_domestica,2,0,24,1,False,pendente
+367,Paciente_5179,Ceilândia,-15.788658,-48.073463,violencia_domestica,2,0,24,3,False,pendente
+368,Paciente_8217,Gama,-16.002803,-48.072165,emergencia_obstetrica,1,0,24,1,False,pendente
+369,Paciente_3429,Samambaia,-15.837372,-48.045178,pos_parto,4,14,18,3,False,pendente
+370,Paciente_9732,Samambaia,-15.868425,-48.054563,pos_parto,4,14,18,2,False,pendente
+371,Paciente_5683,Plano Piloto,-15.742842,-47.880937,pos_parto,4,14,18,1,False,pendente
+372,Paciente_2283,Ceilândia,-15.858851,-48.138341,medicamento_hormonal,3,8,18,2,True,pendente
+373,Paciente_6589,Taguatinga,-15.854611,-48.079846,pos_parto,4,14,18,2,False,pendente
+374,Paciente_5488,Taguatinga,-15.825407,-48.037549,emergencia_obstetrica,1,0,24,3,False,pendente
+375,Paciente_4612,Plano Piloto,-15.774608,-47.921296,pos_parto,4,14,18,2,False,pendente
+376,Paciente_4276,Gama,-16.021951,-48.06131,emergencia_obstetrica,1,0,24,3,False,pendente
+377,Paciente_3663,Taguatinga,-15.819718,-48.070102,medicamento_hormonal,3,8,18,3,True,pendente
+378,Paciente_1405,Taguatinga,-15.847989,-48.057659,emergencia_obstetrica,1,0,24,2,False,pendente
+379,Paciente_6281,Gama,-15.990593,-48.088643,medicamento_hormonal,3,8,18,3,True,pendente
+380,Paciente_9148,Plano Piloto,-15.809489,-47.937458,emergencia_obstetrica,1,0,24,2,False,pendente
+381,Paciente_1237,Samambaia,-15.88162,-48.052984,medicamento_hormonal,3,8,18,3,True,pendente
+382,Paciente_6751,Samambaia,-15.863465,-48.050676,violencia_domestica,2,0,24,2,False,pendente
+383,Paciente_8647,Samambaia,-15.866095,-48.058598,violencia_domestica,2,0,24,1,False,pendente
+384,Paciente_4322,Taguatinga,-15.826224,-48.03502,emergencia_obstetrica,1,0,24,3,False,pendente
+385,Paciente_2904,Samambaia,-15.848054,-48.086155,medicamento_hormonal,3,8,18,1,True,pendente
+386,Paciente_7421,Taguatinga,-15.834935,-48.057015,emergencia_obstetrica,1,0,24,2,False,pendente
+387,Paciente_5691,Samambaia,-15.845181,-48.093128,medicamento_hormonal,3,8,18,3,True,pendente
+388,Paciente_2646,Taguatinga,-15.838087,-48.049897,emergencia_obstetrica,1,0,24,1,False,pendente
+389,Paciente_5567,Samambaia,-15.884198,-48.071119,pos_parto,4,14,18,3,False,pendente
+390,Paciente_4653,Taguatinga,-15.833495,-48.036515,pos_parto,4,14,18,3,False,pendente
+391,Paciente_5304,Samambaia,-15.905048,-48.076494,pos_parto,4,14,18,3,False,pendente
+392,Paciente_7104,Taguatinga,-15.832172,-48.040069,pos_parto,4,14,18,1,False,pendente
+393,Paciente_7390,Taguatinga,-15.842791,-48.072721,emergencia_obstetrica,1,0,24,2,False,pendente
+394,Paciente_8221,Plano Piloto,-15.787245,-47.975036,emergencia_obstetrica,1,0,24,2,False,pendente
+395,Paciente_1342,Plano Piloto,-15.76804,-47.949677,emergencia_obstetrica,1,0,24,3,False,pendente
+396,Paciente_2243,Gama,-16.006615,-48.065656,violencia_domestica,2,0,24,3,False,pendente
+397,Paciente_9019,Plano Piloto,-15.790446,-47.952645,violencia_domestica,2,0,24,1,False,pendente
+398,Paciente_4179,Samambaia,-15.894869,-48.108401,pos_parto,4,14,18,2,False,pendente
+399,Paciente_6842,Plano Piloto,-15.790025,-47.976926,medicamento_hormonal,3,8,18,2,True,pendente
+400,Paciente_5427,Samambaia,-15.859498,-48.104156,medicamento_hormonal,3,8,18,3,True,pendente
+401,Paciente_9199,Taguatinga,-15.824609,-48.063974,medicamento_hormonal,3,8,18,2,True,pendente
+402,Paciente_9172,Gama,-16.028092,-48.04553,violencia_domestica,2,0,24,3,False,pendente
+403,Paciente_3931,Ceilândia,-15.830494,-48.14684,pos_parto,4,14,18,1,False,pendente
+404,Paciente_9873,Ceilândia,-15.85711,-48.107462,violencia_domestica,2,0,24,3,False,pendente
+405,Paciente_3074,Gama,-16.024428,-48.066652,pos_parto,4,14,18,2,False,pendente
+406,Paciente_7210,Ceilândia,-15.787855,-48.103603,emergencia_obstetrica,1,0,24,3,False,pendente
+407,Paciente_9316,Taguatinga,-15.828662,-48.056857,pos_parto,4,14,18,2,False,pendente
+408,Paciente_9277,Taguatinga,-15.862702,-48.074529,violencia_domestica,2,0,24,1,False,pendente
+409,Paciente_4836,Ceilândia,-15.784843,-48.135895,medicamento_hormonal,3,8,18,1,True,pendente
+410,Paciente_8005,Samambaia,-15.871185,-48.071162,violencia_domestica,2,0,24,1,False,pendente
+411,Paciente_3613,Plano Piloto,-15.746711,-47.964856,medicamento_hormonal,3,8,18,3,True,pendente
+412,Paciente_3694,Plano Piloto,-15.806657,-47.939918,medicamento_hormonal,3,8,18,2,True,pendente
+413,Paciente_9592,Taguatinga,-15.847211,-48.032433,violencia_domestica,2,0,24,1,False,pendente
+414,Paciente_9807,Gama,-16.018788,-48.089304,violencia_domestica,2,0,24,3,False,pendente
+415,Paciente_6389,Samambaia,-15.90778,-48.066668,medicamento_hormonal,3,8,18,1,True,pendente
+416,Paciente_6901,Plano Piloto,-15.730107,-47.906221,pos_parto,4,14,18,3,False,pendente
+417,Paciente_2389,Plano Piloto,-15.797685,-47.880788,emergencia_obstetrica,1,0,24,2,False,pendente
+418,Paciente_7437,Plano Piloto,-15.804485,-47.958885,violencia_domestica,2,0,24,3,False,pendente
+419,Paciente_6290,Gama,-15.995355,-48.053323,violencia_domestica,2,0,24,2,False,pendente
+420,Paciente_5871,Samambaia,-15.841215,-48.101328,emergencia_obstetrica,1,0,24,1,False,pendente
+421,Paciente_4267,Ceilândia,-15.855052,-48.09173,medicamento_hormonal,3,8,18,3,True,pendente
+422,Paciente_2483,Ceilândia,-15.821351,-48.146276,violencia_domestica,2,0,24,2,False,pendente
+423,Paciente_2347,Samambaia,-15.883084,-48.097003,medicamento_hormonal,3,8,18,1,True,pendente
+424,Paciente_9585,Samambaia,-15.852323,-48.078587,emergencia_obstetrica,1,0,24,1,False,pendente
+425,Paciente_9098,Taguatinga,-15.85218,-48.075258,medicamento_hormonal,3,8,18,2,True,pendente
+426,Paciente_9071,Taguatinga,-15.848898,-48.033271,pos_parto,4,14,18,3,False,pendente
+427,Paciente_7112,Ceilândia,-15.817366,-48.107663,violencia_domestica,2,0,24,1,False,pendente
+428,Paciente_8240,Ceilândia,-15.807382,-48.127526,violencia_domestica,2,0,24,3,False,pendente
+429,Paciente_4475,Gama,-15.997313,-48.085654,violencia_domestica,2,0,24,1,False,pendente
+430,Paciente_7952,Gama,-16.01938,-48.037993,pos_parto,4,14,18,3,False,pendente
+431,Paciente_2934,Taguatinga,-15.810012,-48.054531,medicamento_hormonal,3,8,18,3,True,pendente
+432,Paciente_4885,Gama,-16.003919,-48.090787,violencia_domestica,2,0,24,1,False,pendente
+433,Paciente_9069,Taguatinga,-15.809417,-48.06457,pos_parto,4,14,18,2,False,pendente
+434,Paciente_9905,Gama,-16.011617,-48.066433,medicamento_hormonal,3,8,18,2,True,pendente
+435,Paciente_5889,Taguatinga,-15.807233,-48.065706,medicamento_hormonal,3,8,18,1,True,pendente
+436,Paciente_7003,Gama,-16.035311,-48.051264,pos_parto,4,14,18,2,False,pendente
+437,Paciente_5536,Gama,-15.989376,-48.087042,emergencia_obstetrica,1,0,24,3,False,pendente
+438,Paciente_9108,Samambaia,-15.899014,-48.078435,violencia_domestica,2,0,24,2,False,pendente
+439,Paciente_2400,Samambaia,-15.8909,-48.115969,emergencia_obstetrica,1,0,24,2,False,pendente
+440,Paciente_4776,Samambaia,-15.903095,-48.112954,pos_parto,4,14,18,1,False,pendente
+441,Paciente_6374,Gama,-16.011506,-48.054119,pos_parto,4,14,18,2,False,pendente
+442,Paciente_7031,Ceilândia,-15.850003,-48.131832,medicamento_hormonal,3,8,18,3,True,pendente
+443,Paciente_7230,Taguatinga,-15.825272,-48.028113,emergencia_obstetrica,1,0,24,2,False,pendente
+444,Paciente_3947,Gama,-16.028022,-48.069662,violencia_domestica,2,0,24,2,False,pendente
+445,Paciente_4428,Gama,-15.987247,-48.070484,pos_parto,4,14,18,3,False,pendente
+446,Paciente_6448,Plano Piloto,-15.782068,-47.930295,pos_parto,4,14,18,1,False,pendente
+447,Paciente_3731,Plano Piloto,-15.818589,-47.890449,pos_parto,4,14,18,1,False,pendente
+448,Paciente_4739,Plano Piloto,-15.732373,-47.90007,pos_parto,4,14,18,2,False,pendente
+449,Paciente_1979,Gama,-16.029195,-48.075545,medicamento_hormonal,3,8,18,2,True,pendente
+450,Paciente_2975,Ceilândia,-15.780867,-48.072912,medicamento_hormonal,3,8,18,2,True,pendente
+451,Paciente_1854,Samambaia,-15.851003,-48.072836,pos_parto,4,14,18,1,False,pendente
+452,Paciente_9416,Gama,-16.003133,-48.04422,emergencia_obstetrica,1,0,24,1,False,pendente
+453,Paciente_2801,Taguatinga,-15.851008,-48.078395,medicamento_hormonal,3,8,18,3,True,pendente
+454,Paciente_3633,Ceilândia,-15.791823,-48.080992,medicamento_hormonal,3,8,18,2,True,pendente
+455,Paciente_2605,Plano Piloto,-15.819855,-47.94446,violencia_domestica,2,0,24,3,False,pendente
+456,Paciente_3511,Ceilândia,-15.807785,-48.126949,violencia_domestica,2,0,24,1,False,pendente
+457,Paciente_8884,Samambaia,-15.866862,-48.072535,violencia_domestica,2,0,24,2,False,pendente
+458,Paciente_4644,Samambaia,-15.879425,-48.079964,violencia_domestica,2,0,24,2,False,pendente
+459,Paciente_8286,Ceilândia,-15.780802,-48.08826,emergencia_obstetrica,1,0,24,3,False,pendente
+460,Paciente_2669,Plano Piloto,-15.76602,-47.906533,emergencia_obstetrica,1,0,24,1,False,pendente
+461,Paciente_2813,Samambaia,-15.883521,-48.086885,medicamento_hormonal,3,8,18,2,True,pendente
+462,Paciente_6374,Plano Piloto,-15.797982,-47.929113,violencia_domestica,2,0,24,1,False,pendente
+463,Paciente_4964,Gama,-16.041341,-48.079052,medicamento_hormonal,3,8,18,1,True,pendente
+464,Paciente_9491,Plano Piloto,-15.8292,-47.899178,medicamento_hormonal,3,8,18,3,True,pendente
+465,Paciente_4568,Taguatinga,-15.828943,-48.030104,pos_parto,4,14,18,2,False,pendente
+466,Paciente_3977,Taguatinga,-15.85974,-48.04543,medicamento_hormonal,3,8,18,2,True,pendente
+467,Paciente_3222,Samambaia,-15.890515,-48.096158,violencia_domestica,2,0,24,2,False,pendente
+468,Paciente_4435,Samambaia,-15.894956,-48.119958,pos_parto,4,14,18,3,False,pendente
+469,Paciente_7870,Plano Piloto,-15.82696,-47.887194,pos_parto,4,14,18,2,False,pendente
+470,Paciente_1693,Plano Piloto,-15.764525,-47.91941,violencia_domestica,2,0,24,3,False,pendente
+471,Paciente_4042,Plano Piloto,-15.746098,-47.936831,violencia_domestica,2,0,24,3,False,pendente
+472,Paciente_1530,Samambaia,-15.877298,-48.099846,violencia_domestica,2,0,24,3,False,pendente
+473,Paciente_9840,Ceilândia,-15.823235,-48.125827,medicamento_hormonal,3,8,18,2,True,pendente
+474,Paciente_7795,Taguatinga,-15.807799,-48.031411,emergencia_obstetrica,1,0,24,2,False,pendente
+475,Paciente_9182,Taguatinga,-15.818706,-48.082544,medicamento_hormonal,3,8,18,3,True,pendente
+476,Paciente_4070,Plano Piloto,-15.730887,-47.952406,medicamento_hormonal,3,8,18,3,True,pendente
+477,Paciente_7138,Plano Piloto,-15.77576,-47.933514,pos_parto,4,14,18,1,False,pendente
+478,Paciente_4663,Ceilândia,-15.853251,-48.141106,emergencia_obstetrica,1,0,24,2,False,pendente
+479,Paciente_3625,Plano Piloto,-15.748479,-47.92,pos_parto,4,14,18,2,False,pendente
+480,Paciente_1527,Taguatinga,-15.858613,-48.06349,emergencia_obstetrica,1,0,24,3,False,pendente
+481,Paciente_7526,Samambaia,-15.888669,-48.074569,violencia_domestica,2,0,24,3,False,pendente
+482,Paciente_6069,Ceilândia,-15.781798,-48.145758,violencia_domestica,2,0,24,2,False,pendente
+483,Paciente_3378,Ceilândia,-15.782626,-48.114625,emergencia_obstetrica,1,0,24,2,False,pendente
+484,Paciente_8556,Samambaia,-15.855422,-48.09926,violencia_domestica,2,0,24,1,False,pendente
+485,Paciente_6639,Gama,-16.018916,-48.045852,pos_parto,4,14,18,1,False,pendente
+486,Paciente_9753,Samambaia,-15.888798,-48.100769,emergencia_obstetrica,1,0,24,2,False,pendente
+487,Paciente_4208,Plano Piloto,-15.765524,-47.971058,violencia_domestica,2,0,24,2,False,pendente
+488,Paciente_8754,Ceilândia,-15.784079,-48.134903,medicamento_hormonal,3,8,18,3,True,pendente
+489,Paciente_9572,Samambaia,-15.880602,-48.113553,violencia_domestica,2,0,24,3,False,pendente
+490,Paciente_1407,Samambaia,-15.904869,-48.047661,medicamento_hormonal,3,8,18,2,True,pendente
+491,Paciente_2866,Gama,-16.006867,-48.041675,emergencia_obstetrica,1,0,24,2,False,pendente
+492,Paciente_7393,Ceilândia,-15.800184,-48.093233,emergencia_obstetrica,1,0,24,2,False,pendente
+493,Paciente_9841,Gama,-16.015598,-48.060478,emergencia_obstetrica,1,0,24,1,False,pendente
+494,Paciente_8526,Samambaia,-15.907538,-48.115662,pos_parto,4,14,18,3,False,pendente
+495,Paciente_5984,Plano Piloto,-15.825424,-47.958638,emergencia_obstetrica,1,0,24,3,False,pendente
+496,Paciente_4582,Taguatinga,-15.835673,-48.076566,emergencia_obstetrica,1,0,24,2,False,pendente
+497,Paciente_9390,Gama,-16.025387,-48.069579,pos_parto,4,14,18,3,False,pendente
+498,Paciente_7308,Plano Piloto,-15.786595,-47.968676,medicamento_hormonal,3,8,18,3,True,pendente
+499,Paciente_7508,Taguatinga,-15.810757,-48.038631,emergencia_obstetrica,1,0,24,3,False,pendente
+500,Paciente_3749,Ceilândia,-15.805918,-48.117609,violencia_domestica,2,0,24,2,False,pendente
+501,Paciente_5937,Plano Piloto,-15.820981,-47.900933,medicamento_hormonal,3,8,18,2,True,pendente
+502,Paciente_3518,Ceilândia,-15.791765,-48.13586,pos_parto,4,14,18,3,False,pendente
+503,Paciente_6789,Samambaia,-15.900674,-48.066924,pos_parto,4,14,18,2,False,pendente
+504,Paciente_2094,Gama,-16.019767,-48.090225,pos_parto,4,14,18,2,False,pendente
+505,Paciente_7079,Plano Piloto,-15.761496,-47.940218,medicamento_hormonal,3,8,18,1,True,pendente
+506,Paciente_2988,Gama,-16.016701,-48.083412,emergencia_obstetrica,1,0,24,3,False,pendente
+507,Paciente_4377,Ceilândia,-15.806244,-48.072518,medicamento_hormonal,3,8,18,1,True,pendente
+508,Paciente_5639,Ceilândia,-15.802824,-48.141409,violencia_domestica,2,0,24,1,False,pendente
+509,Paciente_1983,Plano Piloto,-15.810527,-47.902176,violencia_domestica,2,0,24,1,False,pendente
+510,Paciente_1763,Taguatinga,-15.83074,-48.039001,medicamento_hormonal,3,8,18,2,True,pendente
+511,Paciente_2782,Ceilândia,-15.859213,-48.113168,medicamento_hormonal,3,8,18,1,True,pendente
+512,Paciente_2197,Taguatinga,-15.853399,-48.038667,emergencia_obstetrica,1,0,24,3,False,pendente
+513,Paciente_4141,Plano Piloto,-15.767637,-47.90437,pos_parto,4,14,18,3,False,pendente
+514,Paciente_6144,Gama,-16.034892,-48.053637,emergencia_obstetrica,1,0,24,2,False,pendente
+515,Paciente_5038,Plano Piloto,-15.761577,-47.95834,emergencia_obstetrica,1,0,24,2,False,pendente
+516,Paciente_2475,Gama,-16.02467,-48.080254,medicamento_hormonal,3,8,18,3,True,pendente
+517,Paciente_5745,Taguatinga,-15.844507,-48.083945,medicamento_hormonal,3,8,18,1,True,pendente
+518,Paciente_4179,Samambaia,-15.900233,-48.108263,pos_parto,4,14,18,2,False,pendente
+519,Paciente_9282,Gama,-16.009255,-48.090941,pos_parto,4,14,18,2,False,pendente
+520,Paciente_4645,Plano Piloto,-15.793846,-47.950845,medicamento_hormonal,3,8,18,2,True,pendente
+521,Paciente_5802,Plano Piloto,-15.763459,-47.92917,pos_parto,4,14,18,3,False,pendente
+522,Paciente_8433,Gama,-16.036409,-48.065661,violencia_domestica,2,0,24,2,False,pendente
+523,Paciente_8136,Taguatinga,-15.849418,-48.035103,emergencia_obstetrica,1,0,24,1,False,pendente
+524,Paciente_5804,Taguatinga,-15.862268,-48.042394,medicamento_hormonal,3,8,18,2,True,pendente
+525,Paciente_3858,Samambaia,-15.848245,-48.110299,pos_parto,4,14,18,1,False,pendente
+526,Paciente_2949,Ceilândia,-15.809027,-48.112648,violencia_domestica,2,0,24,2,False,pendente
+527,Paciente_6847,Plano Piloto,-15.803845,-47.940242,pos_parto,4,14,18,3,False,pendente
+528,Paciente_3783,Plano Piloto,-15.748626,-47.964277,pos_parto,4,14,18,1,False,pendente
+529,Paciente_1737,Taguatinga,-15.810045,-48.082034,violencia_domestica,2,0,24,1,False,pendente
+530,Paciente_4202,Samambaia,-15.891004,-48.104315,medicamento_hormonal,3,8,18,1,True,pendente
+531,Paciente_5642,Gama,-16.018639,-48.067469,violencia_domestica,2,0,24,3,False,pendente
+532,Paciente_8094,Ceilândia,-15.83777,-48.111026,violencia_domestica,2,0,24,2,False,pendente
+533,Paciente_4234,Taguatinga,-15.840073,-48.058039,medicamento_hormonal,3,8,18,3,True,pendente
+534,Paciente_9698,Taguatinga,-15.861063,-48.059282,violencia_domestica,2,0,24,1,False,pendente
+535,Paciente_2088,Samambaia,-15.87759,-48.118556,emergencia_obstetrica,1,0,24,2,False,pendente
+536,Paciente_1176,Plano Piloto,-15.731968,-47.953358,emergencia_obstetrica,1,0,24,2,False,pendente
+537,Paciente_2900,Gama,-15.99968,-48.081633,violencia_domestica,2,0,24,3,False,pendente
+538,Paciente_2346,Ceilândia,-15.785174,-48.083046,emergencia_obstetrica,1,0,24,3,False,pendente
+539,Paciente_7330,Samambaia,-15.868507,-48.096323,medicamento_hormonal,3,8,18,1,True,pendente
+540,Paciente_8817,Ceilândia,-15.851947,-48.149573,emergencia_obstetrica,1,0,24,1,False,pendente
+541,Paciente_8148,Ceilândia,-15.850171,-48.134174,medicamento_hormonal,3,8,18,1,True,pendente
+542,Paciente_7035,Plano Piloto,-15.737704,-47.906829,medicamento_hormonal,3,8,18,3,True,pendente
+543,Paciente_4083,Gama,-16.019727,-48.079128,violencia_domestica,2,0,24,3,False,pendente
+544,Paciente_2264,Samambaia,-15.903353,-48.105246,emergencia_obstetrica,1,0,24,3,False,pendente
+545,Paciente_2344,Ceilândia,-15.83741,-48.078613,pos_parto,4,14,18,3,False,pendente
+546,Paciente_3615,Ceilândia,-15.785081,-48.148849,emergencia_obstetrica,1,0,24,1,False,pendente
+547,Paciente_9999,Gama,-16.01471,-48.064658,medicamento_hormonal,3,8,18,3,True,pendente
+548,Paciente_4600,Plano Piloto,-15.800088,-47.912019,violencia_domestica,2,0,24,2,False,pendente
+549,Paciente_8640,Samambaia,-15.873213,-48.088996,medicamento_hormonal,3,8,18,2,True,pendente
+550,Paciente_4555,Samambaia,-15.877865,-48.054087,emergencia_obstetrica,1,0,24,3,False,pendente
+551,Paciente_8646,Gama,-16.031534,-48.066295,violencia_domestica,2,0,24,2,False,pendente
+552,Paciente_5110,Taguatinga,-15.847079,-48.043166,medicamento_hormonal,3,8,18,2,True,pendente
+553,Paciente_8317,Gama,-16.031344,-48.050958,emergencia_obstetrica,1,0,24,3,False,pendente
+554,Paciente_7628,Plano Piloto,-15.774586,-47.883128,violencia_domestica,2,0,24,1,False,pendente
+555,Paciente_4170,Gama,-16.010758,-48.074589,emergencia_obstetrica,1,0,24,1,False,pendente
+556,Paciente_4132,Taguatinga,-15.841622,-48.067658,violencia_domestica,2,0,24,2,False,pendente
+557,Paciente_4486,Gama,-16.020486,-48.086247,emergencia_obstetrica,1,0,24,2,False,pendente
+558,Paciente_4658,Plano Piloto,-15.742987,-47.935559,medicamento_hormonal,3,8,18,2,True,pendente
+559,Paciente_9071,Gama,-15.991247,-48.076849,violencia_domestica,2,0,24,1,False,pendente
+560,Paciente_8769,Taguatinga,-15.834874,-48.071701,violencia_domestica,2,0,24,1,False,pendente
+561,Paciente_9786,Taguatinga,-15.834386,-48.057074,pos_parto,4,14,18,1,False,pendente
+562,Paciente_2909,Samambaia,-15.903115,-48.10234,medicamento_hormonal,3,8,18,3,True,pendente
+563,Paciente_4529,Gama,-16.045281,-48.090089,emergencia_obstetrica,1,0,24,1,False,pendente
+564,Paciente_3865,Gama,-16.025503,-48.047504,medicamento_hormonal,3,8,18,3,True,pendente
+565,Paciente_4675,Taguatinga,-15.847753,-48.044691,violencia_domestica,2,0,24,1,False,pendente
+566,Paciente_9492,Samambaia,-15.889634,-48.078978,medicamento_hormonal,3,8,18,1,True,pendente
+567,Paciente_1656,Ceilândia,-15.805162,-48.083498,violencia_domestica,2,0,24,2,False,pendente
+568,Paciente_6121,Taguatinga,-15.827036,-48.077665,medicamento_hormonal,3,8,18,2,True,pendente
+569,Paciente_8545,Taguatinga,-15.810864,-48.069408,violencia_domestica,2,0,24,3,False,pendente
+570,Paciente_4281,Ceilândia,-15.839752,-48.080859,violencia_domestica,2,0,24,3,False,pendente
+571,Paciente_9840,Taguatinga,-15.848904,-48.082925,violencia_domestica,2,0,24,1,False,pendente
+572,Paciente_9616,Ceilândia,-15.798655,-48.129967,emergencia_obstetrica,1,0,24,3,False,pendente
+573,Paciente_3561,Samambaia,-15.873477,-48.050808,violencia_domestica,2,0,24,1,False,pendente
+574,Paciente_7006,Plano Piloto,-15.752476,-47.971653,violencia_domestica,2,0,24,1,False,pendente
+575,Paciente_6672,Plano Piloto,-15.783892,-47.914245,violencia_domestica,2,0,24,1,False,pendente
+576,Paciente_5819,Ceilândia,-15.814108,-48.119156,violencia_domestica,2,0,24,3,False,pendente
+577,Paciente_9155,Ceilândia,-15.85249,-48.134581,emergencia_obstetrica,1,0,24,3,False,pendente
+578,Paciente_8624,Ceilândia,-15.835336,-48.119815,violencia_domestica,2,0,24,3,False,pendente
+579,Paciente_8484,Gama,-16.044251,-48.073897,emergencia_obstetrica,1,0,24,1,False,pendente
+580,Paciente_1771,Plano Piloto,-15.816315,-47.917582,emergencia_obstetrica,1,0,24,1,False,pendente
+581,Paciente_4617,Ceilândia,-15.819163,-48.140658,medicamento_hormonal,3,8,18,3,True,pendente
+582,Paciente_2805,Taguatinga,-15.845819,-48.02993,medicamento_hormonal,3,8,18,1,True,pendente
+583,Paciente_1085,Plano Piloto,-15.800189,-47.884864,pos_parto,4,14,18,2,False,pendente
+584,Paciente_6870,Ceilândia,-15.792779,-48.139089,violencia_domestica,2,0,24,1,False,pendente
+585,Paciente_8105,Plano Piloto,-15.739564,-47.959962,emergencia_obstetrica,1,0,24,3,False,pendente
+586,Paciente_6929,Ceilândia,-15.8257,-48.141199,medicamento_hormonal,3,8,18,2,True,pendente
+587,Paciente_5295,Plano Piloto,-15.749998,-47.926936,medicamento_hormonal,3,8,18,3,True,pendente
+588,Paciente_6649,Ceilândia,-15.787104,-48.092171,violencia_domestica,2,0,24,1,False,pendente
+589,Paciente_9519,Ceilândia,-15.833264,-48.074532,violencia_domestica,2,0,24,2,False,pendente
+590,Paciente_3414,Plano Piloto,-15.752568,-47.923121,pos_parto,4,14,18,1,False,pendente
+591,Paciente_2545,Taguatinga,-15.859863,-48.026422,medicamento_hormonal,3,8,18,3,True,pendente
+592,Paciente_2092,Samambaia,-15.896721,-48.106004,medicamento_hormonal,3,8,18,3,True,pendente
+593,Paciente_2844,Plano Piloto,-15.757403,-47.975589,pos_parto,4,14,18,2,False,pendente
+594,Paciente_6079,Plano Piloto,-15.79223,-47.887399,medicamento_hormonal,3,8,18,3,True,pendente
+595,Paciente_1423,Taguatinga,-15.807456,-48.068001,violencia_domestica,2,0,24,1,False,pendente
+596,Paciente_8807,Samambaia,-15.855776,-48.045027,violencia_domestica,2,0,24,2,False,pendente
+597,Paciente_1093,Gama,-16.003449,-48.078553,medicamento_hormonal,3,8,18,2,True,pendente
+598,Paciente_1057,Gama,-16.024357,-48.069131,pos_parto,4,14,18,1,False,pendente
+599,Paciente_7369,Samambaia,-15.880214,-48.115644,emergencia_obstetrica,1,0,24,3,False,pendente
+600,Paciente_1683,Samambaia,-15.855253,-48.062723,medicamento_hormonal,3,8,18,1,True,pendente
+601,Paciente_7019,Ceilândia,-15.782039,-48.115128,medicamento_hormonal,3,8,18,1,True,pendente
+602,Paciente_5886,Samambaia,-15.909581,-48.053905,medicamento_hormonal,3,8,18,3,True,pendente
+603,Paciente_6215,Plano Piloto,-15.776694,-47.95777,emergencia_obstetrica,1,0,24,2,False,pendente
+604,Paciente_9159,Samambaia,-15.883364,-48.118604,medicamento_hormonal,3,8,18,3,True,pendente
+605,Paciente_9489,Samambaia,-15.84712,-48.083815,medicamento_hormonal,3,8,18,2,True,pendente
+606,Paciente_5850,Taguatinga,-15.821658,-48.055745,violencia_domestica,2,0,24,2,False,pendente
+607,Paciente_6799,Taguatinga,-15.855231,-48.07231,medicamento_hormonal,3,8,18,1,True,pendente
+608,Paciente_7754,Samambaia,-15.886671,-48.058695,medicamento_hormonal,3,8,18,2,True,pendente
+609,Paciente_8842,Plano Piloto,-15.819036,-47.968389,violencia_domestica,2,0,24,1,False,pendente
+610,Paciente_2534,Taguatinga,-15.826533,-48.059778,pos_parto,4,14,18,3,False,pendente
+611,Paciente_8165,Ceilândia,-15.781294,-48.112697,emergencia_obstetrica,1,0,24,2,False,pendente
+612,Paciente_7990,Samambaia,-15.879577,-48.109132,emergencia_obstetrica,1,0,24,2,False,pendente
+613,Paciente_9653,Plano Piloto,-15.742605,-47.942594,medicamento_hormonal,3,8,18,1,True,pendente
+614,Paciente_5160,Plano Piloto,-15.761561,-47.894301,emergencia_obstetrica,1,0,24,1,False,pendente
+615,Paciente_8335,Taguatinga,-15.861922,-48.07992,emergencia_obstetrica,1,0,24,2,False,pendente
+616,Paciente_1499,Gama,-16.021027,-48.061869,pos_parto,4,14,18,2,False,pendente
+617,Paciente_5906,Samambaia,-15.8933,-48.103354,violencia_domestica,2,0,24,1,False,pendente
+618,Paciente_2938,Taguatinga,-15.833303,-48.039297,emergencia_obstetrica,1,0,24,2,False,pendente
+619,Paciente_3498,Samambaia,-15.882664,-48.111936,medicamento_hormonal,3,8,18,1,True,pendente
+620,Paciente_9736,Plano Piloto,-15.804069,-47.891089,emergencia_obstetrica,1,0,24,3,False,pendente
+621,Paciente_7574,Plano Piloto,-15.757133,-47.882576,medicamento_hormonal,3,8,18,3,True,pendente
+622,Paciente_2265,Ceilândia,-15.850902,-48.110083,emergencia_obstetrica,1,0,24,1,False,pendente
+623,Paciente_1665,Plano Piloto,-15.750699,-47.898297,emergencia_obstetrica,1,0,24,3,False,pendente
+624,Paciente_9172,Ceilândia,-15.792601,-48.119554,emergencia_obstetrica,1,0,24,2,False,pendente
+625,Paciente_3858,Ceilândia,-15.795031,-48.126561,violencia_domestica,2,0,24,1,False,pendente
+626,Paciente_4586,Ceilândia,-15.82859,-48.112853,medicamento_hormonal,3,8,18,2,True,pendente
+627,Paciente_7014,Ceilândia,-15.833434,-48.125842,medicamento_hormonal,3,8,18,3,True,pendente
+628,Paciente_6197,Plano Piloto,-15.770787,-47.935741,pos_parto,4,14,18,3,False,pendente
+629,Paciente_5229,Ceilândia,-15.779564,-48.084285,emergencia_obstetrica,1,0,24,3,False,pendente
+630,Paciente_4898,Plano Piloto,-15.740407,-47.965376,violencia_domestica,2,0,24,2,False,pendente
+631,Paciente_4325,Taguatinga,-15.848076,-48.063626,medicamento_hormonal,3,8,18,1,True,pendente
+632,Paciente_7325,Taguatinga,-15.807958,-48.059918,emergencia_obstetrica,1,0,24,3,False,pendente
+633,Paciente_8239,Ceilândia,-15.826964,-48.151175,emergencia_obstetrica,1,0,24,1,False,pendente
+634,Paciente_5432,Plano Piloto,-15.736103,-47.881564,medicamento_hormonal,3,8,18,1,True,pendente
+635,Paciente_3941,Plano Piloto,-15.820163,-47.900818,violencia_domestica,2,0,24,3,False,pendente
+636,Paciente_6108,Taguatinga,-15.831804,-48.081428,violencia_domestica,2,0,24,3,False,pendente
+637,Paciente_6568,Plano Piloto,-15.789399,-47.939656,emergencia_obstetrica,1,0,24,3,False,pendente
+638,Paciente_9084,Ceilândia,-15.842234,-48.104024,emergencia_obstetrica,1,0,24,3,False,pendente
+639,Paciente_7427,Gama,-16.008944,-48.039693,emergencia_obstetrica,1,0,24,1,False,pendente
+640,Paciente_3327,Ceilândia,-15.834891,-48.141444,pos_parto,4,14,18,1,False,pendente
+641,Paciente_9980,Taguatinga,-15.807218,-48.080124,violencia_domestica,2,0,24,3,False,pendente
+642,Paciente_1669,Ceilândia,-15.823918,-48.126035,violencia_domestica,2,0,24,2,False,pendente
+643,Paciente_4103,Samambaia,-15.84005,-48.117929,pos_parto,4,14,18,1,False,pendente
+644,Paciente_4343,Taguatinga,-15.827219,-48.028005,emergencia_obstetrica,1,0,24,1,False,pendente
+645,Paciente_5041,Plano Piloto,-15.757542,-47.885229,medicamento_hormonal,3,8,18,3,True,pendente
+646,Paciente_7456,Taguatinga,-15.824841,-48.085591,medicamento_hormonal,3,8,18,2,True,pendente
+647,Paciente_2800,Plano Piloto,-15.765324,-47.906465,violencia_domestica,2,0,24,1,False,pendente
+648,Paciente_8177,Gama,-16.027093,-48.086598,pos_parto,4,14,18,3,False,pendente
+649,Paciente_8448,Gama,-16.012872,-48.035514,emergencia_obstetrica,1,0,24,1,False,pendente
+650,Paciente_5838,Ceilândia,-15.787522,-48.111387,violencia_domestica,2,0,24,1,False,pendente
+651,Paciente_8276,Gama,-15.997434,-48.03787,medicamento_hormonal,3,8,18,1,True,pendente
+652,Paciente_4158,Taguatinga,-15.808938,-48.068689,medicamento_hormonal,3,8,18,2,True,pendente
+653,Paciente_2081,Gama,-15.98848,-48.038879,pos_parto,4,14,18,2,False,pendente
+654,Paciente_4561,Taguatinga,-15.835095,-48.051136,medicamento_hormonal,3,8,18,2,True,pendente
+655,Paciente_6855,Samambaia,-15.900688,-48.08384,medicamento_hormonal,3,8,18,3,True,pendente
+656,Paciente_9136,Gama,-16.022254,-48.0449,pos_parto,4,14,18,2,False,pendente
+657,Paciente_4899,Ceilândia,-15.841495,-48.103352,emergencia_obstetrica,1,0,24,3,False,pendente
+658,Paciente_4178,Gama,-16.039743,-48.07796,medicamento_hormonal,3,8,18,2,True,pendente
+659,Paciente_1433,Samambaia,-15.886979,-48.108314,pos_parto,4,14,18,2,False,pendente
+660,Paciente_4067,Taguatinga,-15.846908,-48.085562,medicamento_hormonal,3,8,18,2,True,pendente
+661,Paciente_2084,Gama,-16.003651,-48.049502,violencia_domestica,2,0,24,2,False,pendente
+662,Paciente_3177,Samambaia,-15.878058,-48.091162,violencia_domestica,2,0,24,2,False,pendente
+663,Paciente_4041,Plano Piloto,-15.799354,-47.890181,emergencia_obstetrica,1,0,24,2,False,pendente
+664,Paciente_5971,Plano Piloto,-15.796834,-47.884447,emergencia_obstetrica,1,0,24,1,False,pendente
+665,Paciente_2064,Ceilândia,-15.845095,-48.120723,medicamento_hormonal,3,8,18,2,True,pendente
+666,Paciente_6511,Plano Piloto,-15.729923,-47.903878,pos_parto,4,14,18,1,False,pendente
+667,Paciente_8135,Taguatinga,-15.834002,-48.060373,medicamento_hormonal,3,8,18,2,True,pendente
+668,Paciente_2006,Gama,-16.010711,-48.079236,pos_parto,4,14,18,3,False,pendente
+669,Paciente_1014,Gama,-16.004099,-48.086016,medicamento_hormonal,3,8,18,1,True,pendente
+670,Paciente_3174,Gama,-16.021023,-48.076348,medicamento_hormonal,3,8,18,1,True,pendente
+671,Paciente_5563,Taguatinga,-15.813045,-48.026801,pos_parto,4,14,18,1,False,pendente
+672,Paciente_5524,Samambaia,-15.839464,-48.105341,pos_parto,4,14,18,2,False,pendente
+673,Paciente_9995,Samambaia,-15.848148,-48.07626,medicamento_hormonal,3,8,18,2,True,pendente
+674,Paciente_6960,Gama,-16.000156,-48.065611,pos_parto,4,14,18,2,False,pendente
+675,Paciente_6612,Taguatinga,-15.848388,-48.085137,pos_parto,4,14,18,3,False,pendente
+676,Paciente_3818,Gama,-15.987779,-48.040867,pos_parto,4,14,18,3,False,pendente
+677,Paciente_8997,Samambaia,-15.889286,-48.058163,medicamento_hormonal,3,8,18,3,True,pendente
+678,Paciente_2285,Gama,-16.030924,-48.047538,medicamento_hormonal,3,8,18,2,True,pendente
+679,Paciente_1555,Plano Piloto,-15.827965,-47.920783,violencia_domestica,2,0,24,3,False,pendente
+680,Paciente_3662,Ceilândia,-15.839991,-48.118549,medicamento_hormonal,3,8,18,1,True,pendente
+681,Paciente_3202,Gama,-15.999759,-48.077945,emergencia_obstetrica,1,0,24,1,False,pendente
+682,Paciente_4014,Gama,-16.022203,-48.065391,violencia_domestica,2,0,24,3,False,pendente
+683,Paciente_9611,Samambaia,-15.874841,-48.067583,medicamento_hormonal,3,8,18,2,True,pendente
+684,Paciente_7443,Taguatinga,-15.856672,-48.032352,pos_parto,4,14,18,1,False,pendente
+685,Paciente_8066,Gama,-16.000439,-48.064558,emergencia_obstetrica,1,0,24,2,False,pendente
+686,Paciente_6549,Ceilândia,-15.78452,-48.089588,emergencia_obstetrica,1,0,24,1,False,pendente
+687,Paciente_1381,Ceilândia,-15.810277,-48.149985,emergencia_obstetrica,1,0,24,3,False,pendente
+688,Paciente_5228,Gama,-16.043042,-48.052871,pos_parto,4,14,18,3,False,pendente
+689,Paciente_8208,Gama,-15.996739,-48.065065,violencia_domestica,2,0,24,1,False,pendente
+690,Paciente_6280,Plano Piloto,-15.791219,-47.883118,pos_parto,4,14,18,2,False,pendente
+691,Paciente_6972,Taguatinga,-15.863033,-48.033745,medicamento_hormonal,3,8,18,1,True,pendente
+692,Paciente_4149,Samambaia,-15.905005,-48.110657,violencia_domestica,2,0,24,2,False,pendente
+693,Paciente_2874,Taguatinga,-15.80479,-48.08254,emergencia_obstetrica,1,0,24,3,False,pendente
+694,Paciente_7145,Samambaia,-15.887615,-48.109323,violencia_domestica,2,0,24,2,False,pendente
+695,Paciente_6727,Samambaia,-15.8913,-48.091019,medicamento_hormonal,3,8,18,1,True,pendente
+696,Paciente_1815,Plano Piloto,-15.765248,-47.935404,violencia_domestica,2,0,24,2,False,pendente
+697,Paciente_6697,Gama,-16.045444,-48.04689,pos_parto,4,14,18,3,False,pendente
+698,Paciente_6199,Plano Piloto,-15.795881,-47.889665,medicamento_hormonal,3,8,18,2,True,pendente
+699,Paciente_2083,Plano Piloto,-15.744761,-47.935607,medicamento_hormonal,3,8,18,3,True,pendente
+700,Paciente_2245,Gama,-15.994187,-48.070848,emergencia_obstetrica,1,0,24,2,False,pendente
+701,Paciente_1538,Samambaia,-15.902853,-48.120516,pos_parto,4,14,18,3,False,pendente
+702,Paciente_5831,Plano Piloto,-15.749521,-47.957584,emergencia_obstetrica,1,0,24,2,False,pendente
+703,Paciente_4079,Gama,-15.990321,-48.060011,emergencia_obstetrica,1,0,24,3,False,pendente
+704,Paciente_8687,Gama,-16.001857,-48.072316,emergencia_obstetrica,1,0,24,3,False,pendente
+705,Paciente_7396,Gama,-15.997374,-48.062462,medicamento_hormonal,3,8,18,1,True,pendente
+706,Paciente_7858,Gama,-16.023393,-48.055019,pos_parto,4,14,18,2,False,pendente
+707,Paciente_3530,Gama,-16.026824,-48.042396,violencia_domestica,2,0,24,1,False,pendente
+708,Paciente_3091,Samambaia,-15.875835,-48.052415,pos_parto,4,14,18,2,False,pendente
+709,Paciente_4871,Gama,-15.991229,-48.043748,emergencia_obstetrica,1,0,24,1,False,pendente
+710,Paciente_3346,Ceilândia,-15.805292,-48.145228,pos_parto,4,14,18,2,False,pendente
+711,Paciente_2584,Samambaia,-15.839245,-48.071876,pos_parto,4,14,18,1,False,pendente
+712,Paciente_5734,Samambaia,-15.904583,-48.118027,medicamento_hormonal,3,8,18,1,True,pendente
+713,Paciente_9125,Plano Piloto,-15.806431,-47.94362,medicamento_hormonal,3,8,18,2,True,pendente
+714,Paciente_5495,Taguatinga,-15.810404,-48.081599,medicamento_hormonal,3,8,18,3,True,pendente
+715,Paciente_9796,Plano Piloto,-15.783179,-47.923421,medicamento_hormonal,3,8,18,2,True,pendente
+716,Paciente_1171,Samambaia,-15.885779,-48.090476,violencia_domestica,2,0,24,3,False,pendente
+717,Paciente_9916,Taguatinga,-15.837186,-48.077253,pos_parto,4,14,18,3,False,pendente
+718,Paciente_8352,Gama,-16.022873,-48.054122,emergencia_obstetrica,1,0,24,2,False,pendente
+719,Paciente_4018,Taguatinga,-15.83736,-48.07863,emergencia_obstetrica,1,0,24,1,False,pendente
+720,Paciente_3818,Samambaia,-15.862031,-48.09455,emergencia_obstetrica,1,0,24,3,False,pendente
+721,Paciente_4086,Samambaia,-15.881416,-48.118722,violencia_domestica,2,0,24,3,False,pendente
+722,Paciente_6596,Ceilândia,-15.837747,-48.144934,violencia_domestica,2,0,24,1,False,pendente
+723,Paciente_3400,Taguatinga,-15.856568,-48.044062,emergencia_obstetrica,1,0,24,1,False,pendente
+724,Paciente_8471,Taguatinga,-15.817657,-48.060657,pos_parto,4,14,18,1,False,pendente
+725,Paciente_9612,Gama,-16.042903,-48.07769,medicamento_hormonal,3,8,18,3,True,pendente
+726,Paciente_8216,Plano Piloto,-15.824688,-47.918294,medicamento_hormonal,3,8,18,1,True,pendente
+727,Paciente_9371,Plano Piloto,-15.815672,-47.948782,emergencia_obstetrica,1,0,24,1,False,pendente
+728,Paciente_8510,Taguatinga,-15.857394,-48.071239,medicamento_hormonal,3,8,18,2,True,pendente
+729,Paciente_9903,Plano Piloto,-15.736527,-47.958604,pos_parto,4,14,18,1,False,pendente
+730,Paciente_1432,Samambaia,-15.899829,-48.104281,pos_parto,4,14,18,2,False,pendente
+731,Paciente_8297,Gama,-16.019542,-48.079563,emergencia_obstetrica,1,0,24,2,False,pendente
+732,Paciente_7478,Gama,-16.032795,-48.0777,emergencia_obstetrica,1,0,24,2,False,pendente
+733,Paciente_9505,Ceilândia,-15.808368,-48.113447,violencia_domestica,2,0,24,3,False,pendente
+734,Paciente_9979,Plano Piloto,-15.819926,-47.957284,medicamento_hormonal,3,8,18,1,True,pendente
+735,Paciente_7172,Samambaia,-15.870312,-48.117194,violencia_domestica,2,0,24,2,False,pendente
+736,Paciente_9695,Plano Piloto,-15.768609,-47.920683,emergencia_obstetrica,1,0,24,3,False,pendente
+737,Paciente_3267,Ceilândia,-15.854178,-48.080195,violencia_domestica,2,0,24,3,False,pendente
+738,Paciente_5585,Ceilândia,-15.818166,-48.137411,emergencia_obstetrica,1,0,24,3,False,pendente
+739,Paciente_2020,Plano Piloto,-15.768298,-47.94348,emergencia_obstetrica,1,0,24,1,False,pendente
+740,Paciente_3212,Taguatinga,-15.832859,-48.057374,violencia_domestica,2,0,24,3,False,pendente
+741,Paciente_6022,Samambaia,-15.854928,-48.072187,emergencia_obstetrica,1,0,24,2,False,pendente
+742,Paciente_9459,Plano Piloto,-15.820273,-47.978737,pos_parto,4,14,18,1,False,pendente
+743,Paciente_8799,Plano Piloto,-15.815705,-47.948912,pos_parto,4,14,18,1,False,pendente
+744,Paciente_4435,Ceilândia,-15.830629,-48.123673,emergencia_obstetrica,1,0,24,2,False,pendente
+745,Paciente_9248,Gama,-16.039331,-48.05953,violencia_domestica,2,0,24,2,False,pendente
+746,Paciente_1375,Gama,-15.990133,-48.083049,pos_parto,4,14,18,1,False,pendente
+747,Paciente_3412,Samambaia,-15.838966,-48.100829,medicamento_hormonal,3,8,18,1,True,pendente
+748,Paciente_3016,Gama,-16.045495,-48.060587,pos_parto,4,14,18,2,False,pendente
+749,Paciente_3938,Taguatinga,-15.804202,-48.065256,medicamento_hormonal,3,8,18,2,True,pendente
+750,Paciente_3672,Plano Piloto,-15.749525,-47.881314,pos_parto,4,14,18,3,False,pendente
+751,Paciente_4397,Gama,-15.990616,-48.092015,medicamento_hormonal,3,8,18,2,True,pendente
+752,Paciente_4467,Gama,-16.014969,-48.067064,pos_parto,4,14,18,1,False,pendente
+753,Paciente_3086,Ceilândia,-15.799651,-48.088026,pos_parto,4,14,18,2,False,pendente
+754,Paciente_6668,Plano Piloto,-15.825709,-47.90104,medicamento_hormonal,3,8,18,3,True,pendente
+755,Paciente_2999,Ceilândia,-15.815591,-48.145653,emergencia_obstetrica,1,0,24,1,False,pendente
+756,Paciente_7012,Samambaia,-15.881652,-48.087078,medicamento_hormonal,3,8,18,1,True,pendente
+757,Paciente_5007,Taguatinga,-15.826974,-48.072557,emergencia_obstetrica,1,0,24,2,False,pendente
+758,Paciente_5657,Ceilândia,-15.791273,-48.111409,medicamento_hormonal,3,8,18,2,True,pendente
+759,Paciente_9829,Samambaia,-15.874566,-48.109899,emergencia_obstetrica,1,0,24,2,False,pendente
+760,Paciente_3256,Samambaia,-15.858964,-48.091746,pos_parto,4,14,18,1,False,pendente
+761,Paciente_7937,Plano Piloto,-15.820477,-47.912392,medicamento_hormonal,3,8,18,1,True,pendente
+762,Paciente_3832,Ceilândia,-15.812003,-48.133445,medicamento_hormonal,3,8,18,3,True,pendente
+763,Paciente_5801,Samambaia,-15.899462,-48.112419,emergencia_obstetrica,1,0,24,3,False,pendente
+764,Paciente_5691,Samambaia,-15.899105,-48.108491,pos_parto,4,14,18,3,False,pendente
+765,Paciente_4394,Gama,-16.043905,-48.082471,medicamento_hormonal,3,8,18,3,True,pendente
+766,Paciente_1280,Plano Piloto,-15.743454,-47.9708,violencia_domestica,2,0,24,3,False,pendente
+767,Paciente_1972,Gama,-16.028706,-48.093242,violencia_domestica,2,0,24,3,False,pendente
+768,Paciente_3187,Plano Piloto,-15.804341,-47.94196,pos_parto,4,14,18,1,False,pendente
+769,Paciente_2743,Taguatinga,-15.805782,-48.077057,emergencia_obstetrica,1,0,24,1,False,pendente
+770,Paciente_5526,Ceilândia,-15.785945,-48.10795,emergencia_obstetrica,1,0,24,2,False,pendente
+771,Paciente_5125,Gama,-16.029502,-48.091951,pos_parto,4,14,18,3,False,pendente
+772,Paciente_2131,Ceilândia,-15.834094,-48.109085,emergencia_obstetrica,1,0,24,1,False,pendente
+773,Paciente_7672,Samambaia,-15.859136,-48.089045,violencia_domestica,2,0,24,1,False,pendente
+774,Paciente_5764,Ceilândia,-15.827921,-48.097856,medicamento_hormonal,3,8,18,1,True,pendente
+775,Paciente_8170,Gama,-16.033543,-48.034332,emergencia_obstetrica,1,0,24,1,False,pendente
+776,Paciente_3593,Ceilândia,-15.837433,-48.148926,violencia_domestica,2,0,24,2,False,pendente
+777,Paciente_2151,Gama,-16.020112,-48.050986,emergencia_obstetrica,1,0,24,2,False,pendente
+778,Paciente_1847,Taguatinga,-15.854158,-48.045051,pos_parto,4,14,18,3,False,pendente
+779,Paciente_3627,Gama,-15.992115,-48.071933,violencia_domestica,2,0,24,3,False,pendente
+780,Paciente_9433,Samambaia,-15.856147,-48.124461,violencia_domestica,2,0,24,3,False,pendente
+781,Paciente_3065,Taguatinga,-15.835712,-48.0525,emergencia_obstetrica,1,0,24,1,False,pendente
+782,Paciente_7237,Plano Piloto,-15.760779,-47.906554,emergencia_obstetrica,1,0,24,3,False,pendente
+783,Paciente_8001,Samambaia,-15.911463,-48.111349,medicamento_hormonal,3,8,18,2,True,pendente
+784,Paciente_3655,Taguatinga,-15.823817,-48.03553,emergencia_obstetrica,1,0,24,3,False,pendente
+785,Paciente_1182,Taguatinga,-15.854717,-48.057086,pos_parto,4,14,18,1,False,pendente
+786,Paciente_1342,Samambaia,-15.904257,-48.060723,pos_parto,4,14,18,1,False,pendente
+787,Paciente_5494,Gama,-16.033645,-48.084909,emergencia_obstetrica,1,0,24,2,False,pendente
+788,Paciente_9722,Samambaia,-15.869886,-48.063619,violencia_domestica,2,0,24,3,False,pendente
+789,Paciente_9462,Gama,-16.029441,-48.048934,emergencia_obstetrica,1,0,24,1,False,pendente
+790,Paciente_7184,Gama,-16.022396,-48.035606,violencia_domestica,2,0,24,3,False,pendente
+791,Paciente_1705,Samambaia,-15.875716,-48.109243,violencia_domestica,2,0,24,3,False,pendente
+792,Paciente_3940,Samambaia,-15.899079,-48.045933,medicamento_hormonal,3,8,18,3,True,pendente
+793,Paciente_8947,Ceilândia,-15.79597,-48.098139,medicamento_hormonal,3,8,18,3,True,pendente
+794,Paciente_8604,Taguatinga,-15.851705,-48.032313,emergencia_obstetrica,1,0,24,3,False,pendente
+795,Paciente_8453,Samambaia,-15.850776,-48.071387,pos_parto,4,14,18,3,False,pendente
+796,Paciente_2533,Taguatinga,-15.812214,-48.030247,emergencia_obstetrica,1,0,24,2,False,pendente
+797,Paciente_9940,Samambaia,-15.834528,-48.090513,emergencia_obstetrica,1,0,24,1,False,pendente
+798,Paciente_9456,Plano Piloto,-15.734577,-47.885872,violencia_domestica,2,0,24,3,False,pendente
+799,Paciente_4058,Ceilândia,-15.80317,-48.149215,medicamento_hormonal,3,8,18,3,True,pendente
+800,Paciente_4610,Taguatinga,-15.842192,-48.052044,medicamento_hormonal,3,8,18,3,True,pendente
+801,Paciente_9944,Gama,-16.006406,-48.053162,medicamento_hormonal,3,8,18,2,True,pendente
+802,Paciente_8957,Plano Piloto,-15.771284,-47.891105,medicamento_hormonal,3,8,18,3,True,pendente
+803,Paciente_3364,Gama,-15.992847,-48.050793,medicamento_hormonal,3,8,18,2,True,pendente
+804,Paciente_6059,Ceilândia,-15.806938,-48.077697,medicamento_hormonal,3,8,18,1,True,pendente
+805,Paciente_2778,Plano Piloto,-15.810414,-47.906676,pos_parto,4,14,18,2,False,pendente
+806,Paciente_9535,Taguatinga,-15.834662,-48.074708,pos_parto,4,14,18,2,False,pendente
+807,Paciente_3016,Gama,-15.990352,-48.088378,pos_parto,4,14,18,1,False,pendente
+808,Paciente_8014,Ceilândia,-15.793364,-48.092187,violencia_domestica,2,0,24,1,False,pendente
+809,Paciente_7519,Ceilândia,-15.819183,-48.142699,pos_parto,4,14,18,2,False,pendente
+810,Paciente_4247,Plano Piloto,-15.763136,-47.918449,pos_parto,4,14,18,3,False,pendente
+811,Paciente_2309,Samambaia,-15.858198,-48.094507,medicamento_hormonal,3,8,18,3,True,pendente
+812,Paciente_7809,Samambaia,-15.85473,-48.074947,pos_parto,4,14,18,3,False,pendente
+813,Paciente_7058,Ceilândia,-15.813191,-48.120577,violencia_domestica,2,0,24,1,False,pendente
+814,Paciente_2191,Samambaia,-15.899236,-48.04936,pos_parto,4,14,18,2,False,pendente
+815,Paciente_3438,Ceilândia,-15.855696,-48.077676,medicamento_hormonal,3,8,18,1,True,pendente
+816,Paciente_2601,Taguatinga,-15.861292,-48.02876,violencia_domestica,2,0,24,3,False,pendente
+817,Paciente_6257,Taguatinga,-15.803451,-48.036785,violencia_domestica,2,0,24,2,False,pendente
+818,Paciente_7116,Plano Piloto,-15.792709,-47.967903,pos_parto,4,14,18,2,False,pendente
+819,Paciente_7066,Samambaia,-15.845412,-48.110896,medicamento_hormonal,3,8,18,3,True,pendente
+820,Paciente_5116,Ceilândia,-15.813332,-48.086026,pos_parto,4,14,18,2,False,pendente
+821,Paciente_2519,Plano Piloto,-15.7697,-47.930275,pos_parto,4,14,18,2,False,pendente
+822,Paciente_3384,Gama,-16.016619,-48.07427,medicamento_hormonal,3,8,18,1,True,pendente
+823,Paciente_9540,Ceilândia,-15.854104,-48.113122,emergencia_obstetrica,1,0,24,3,False,pendente
+824,Paciente_3541,Plano Piloto,-15.809691,-47.904619,pos_parto,4,14,18,1,False,pendente
+825,Paciente_9561,Gama,-16.032603,-48.092225,violencia_domestica,2,0,24,1,False,pendente
+826,Paciente_8670,Gama,-15.998398,-48.090126,medicamento_hormonal,3,8,18,1,True,pendente
+827,Paciente_3349,Samambaia,-15.851216,-48.071613,emergencia_obstetrica,1,0,24,1,False,pendente
+828,Paciente_9800,Taguatinga,-15.854256,-48.02868,violencia_domestica,2,0,24,3,False,pendente
+829,Paciente_4552,Samambaia,-15.879385,-48.067246,medicamento_hormonal,3,8,18,3,True,pendente
+830,Paciente_2377,Ceilândia,-15.786094,-48.083579,emergencia_obstetrica,1,0,24,1,False,pendente
+831,Paciente_4462,Gama,-16.011551,-48.067409,pos_parto,4,14,18,1,False,pendente
+832,Paciente_9808,Samambaia,-15.851288,-48.10749,medicamento_hormonal,3,8,18,1,True,pendente
+833,Paciente_8949,Gama,-16.000967,-48.073557,medicamento_hormonal,3,8,18,3,True,pendente
+834,Paciente_3931,Plano Piloto,-15.737705,-47.912529,emergencia_obstetrica,1,0,24,2,False,pendente
+835,Paciente_6752,Taguatinga,-15.832212,-48.032229,violencia_domestica,2,0,24,1,False,pendente
+836,Paciente_7143,Plano Piloto,-15.791747,-47.933993,medicamento_hormonal,3,8,18,1,True,pendente
+837,Paciente_7390,Gama,-16.013559,-48.078891,pos_parto,4,14,18,3,False,pendente
+838,Paciente_7500,Ceilândia,-15.812405,-48.083683,pos_parto,4,14,18,2,False,pendente
+839,Paciente_3898,Gama,-15.991582,-48.083666,emergencia_obstetrica,1,0,24,1,False,pendente
+840,Paciente_7911,Taguatinga,-15.821008,-48.031687,medicamento_hormonal,3,8,18,3,True,pendente
+841,Paciente_6359,Gama,-15.989205,-48.068082,violencia_domestica,2,0,24,2,False,pendente
+842,Paciente_1313,Taguatinga,-15.826653,-48.058017,pos_parto,4,14,18,1,False,pendente
+843,Paciente_1985,Samambaia,-15.879649,-48.096009,medicamento_hormonal,3,8,18,2,True,pendente
+844,Paciente_5970,Samambaia,-15.883356,-48.094678,pos_parto,4,14,18,3,False,pendente
+845,Paciente_6481,Plano Piloto,-15.809513,-47.905107,pos_parto,4,14,18,3,False,pendente
+846,Paciente_6893,Plano Piloto,-15.774967,-47.935253,violencia_domestica,2,0,24,1,False,pendente
+847,Paciente_2899,Gama,-16.00163,-48.092219,emergencia_obstetrica,1,0,24,1,False,pendente
+848,Paciente_1101,Taguatinga,-15.823772,-48.076812,emergencia_obstetrica,1,0,24,3,False,pendente
+849,Paciente_4208,Samambaia,-15.868631,-48.120872,violencia_domestica,2,0,24,3,False,pendente
+850,Paciente_2455,Taguatinga,-15.808199,-48.083539,pos_parto,4,14,18,3,False,pendente
+851,Paciente_8480,Samambaia,-15.839502,-48.099618,emergencia_obstetrica,1,0,24,2,False,pendente
+852,Paciente_7617,Samambaia,-15.888242,-48.103888,emergencia_obstetrica,1,0,24,2,False,pendente
+853,Paciente_8783,Samambaia,-15.841001,-48.120941,medicamento_hormonal,3,8,18,2,True,pendente
+854,Paciente_1567,Samambaia,-15.867525,-48.092108,violencia_domestica,2,0,24,3,False,pendente
+855,Paciente_5404,Taguatinga,-15.858498,-48.032643,pos_parto,4,14,18,1,False,pendente
+856,Paciente_1297,Plano Piloto,-15.819536,-47.908136,emergencia_obstetrica,1,0,24,1,False,pendente
+857,Paciente_8063,Samambaia,-15.882034,-48.078243,violencia_domestica,2,0,24,2,False,pendente
+858,Paciente_5900,Gama,-16.034147,-48.047286,pos_parto,4,14,18,2,False,pendente
+859,Paciente_7326,Plano Piloto,-15.789931,-47.934306,pos_parto,4,14,18,2,False,pendente
+860,Paciente_7379,Gama,-16.015244,-48.082373,medicamento_hormonal,3,8,18,2,True,pendente
+861,Paciente_3737,Gama,-16.004647,-48.044305,emergencia_obstetrica,1,0,24,3,False,pendente
+862,Paciente_1458,Plano Piloto,-15.738661,-47.959655,violencia_domestica,2,0,24,1,False,pendente
+863,Paciente_7166,Taguatinga,-15.844321,-48.056439,pos_parto,4,14,18,2,False,pendente
+864,Paciente_5244,Ceilândia,-15.787454,-48.138395,violencia_domestica,2,0,24,3,False,pendente
+865,Paciente_6958,Plano Piloto,-15.77407,-47.897879,violencia_domestica,2,0,24,1,False,pendente
+866,Paciente_6004,Taguatinga,-15.862173,-48.049237,violencia_domestica,2,0,24,1,False,pendente
+867,Paciente_2930,Samambaia,-15.892185,-48.105434,pos_parto,4,14,18,2,False,pendente
+868,Paciente_5831,Plano Piloto,-15.756173,-47.894037,emergencia_obstetrica,1,0,24,2,False,pendente
+869,Paciente_7283,Ceilândia,-15.840831,-48.0787,emergencia_obstetrica,1,0,24,2,False,pendente
+870,Paciente_7171,Plano Piloto,-15.736167,-47.920383,violencia_domestica,2,0,24,3,False,pendente
+871,Paciente_5275,Plano Piloto,-15.732073,-47.906786,emergencia_obstetrica,1,0,24,2,False,pendente
+872,Paciente_4106,Taguatinga,-15.855472,-48.081466,violencia_domestica,2,0,24,2,False,pendente
+873,Paciente_1328,Taguatinga,-15.862569,-48.049304,pos_parto,4,14,18,1,False,pendente
+874,Paciente_5311,Gama,-16.014221,-48.070108,violencia_domestica,2,0,24,2,False,pendente
+875,Paciente_7282,Plano Piloto,-15.764975,-47.89341,violencia_domestica,2,0,24,3,False,pendente
+876,Paciente_8118,Plano Piloto,-15.810696,-47.957558,emergencia_obstetrica,1,0,24,1,False,pendente
+877,Paciente_2890,Ceilândia,-15.832115,-48.078183,medicamento_hormonal,3,8,18,3,True,pendente
+878,Paciente_5402,Ceilândia,-15.789483,-48.118126,violencia_domestica,2,0,24,1,False,pendente
+879,Paciente_8074,Taguatinga,-15.842447,-48.056805,violencia_domestica,2,0,24,1,False,pendente
+880,Paciente_9774,Samambaia,-15.87179,-48.121336,medicamento_hormonal,3,8,18,1,True,pendente
+881,Paciente_5875,Plano Piloto,-15.80352,-47.918265,medicamento_hormonal,3,8,18,2,True,pendente
+882,Paciente_4629,Gama,-15.995052,-48.060224,violencia_domestica,2,0,24,1,False,pendente
+883,Paciente_3031,Plano Piloto,-15.771566,-47.912467,emergencia_obstetrica,1,0,24,1,False,pendente
+884,Paciente_8674,Plano Piloto,-15.732409,-47.931042,medicamento_hormonal,3,8,18,1,True,pendente
+885,Paciente_1160,Samambaia,-15.880552,-48.076953,medicamento_hormonal,3,8,18,2,True,pendente
+886,Paciente_2337,Plano Piloto,-15.787115,-47.907461,violencia_domestica,2,0,24,3,False,pendente
+887,Paciente_6067,Ceilândia,-15.857253,-48.073036,pos_parto,4,14,18,2,False,pendente
+888,Paciente_9839,Plano Piloto,-15.763414,-47.976608,emergencia_obstetrica,1,0,24,2,False,pendente
+889,Paciente_7026,Plano Piloto,-15.745676,-47.936897,medicamento_hormonal,3,8,18,3,True,pendente
+890,Paciente_5765,Samambaia,-15.907103,-48.088329,emergencia_obstetrica,1,0,24,3,False,pendente
+891,Paciente_8220,Plano Piloto,-15.787686,-47.898068,pos_parto,4,14,18,2,False,pendente
+892,Paciente_3191,Taguatinga,-15.860774,-48.075861,emergencia_obstetrica,1,0,24,2,False,pendente
+893,Paciente_4629,Samambaia,-15.900337,-48.055669,violencia_domestica,2,0,24,1,False,pendente
+894,Paciente_1077,Taguatinga,-15.823602,-48.056549,medicamento_hormonal,3,8,18,3,True,pendente
+895,Paciente_8087,Samambaia,-15.891098,-48.114351,emergencia_obstetrica,1,0,24,3,False,pendente
+896,Paciente_5256,Ceilândia,-15.814,-48.140349,pos_parto,4,14,18,2,False,pendente
+897,Paciente_2100,Taguatinga,-15.819609,-48.050584,pos_parto,4,14,18,3,False,pendente
+898,Paciente_8384,Gama,-16.005507,-48.052403,pos_parto,4,14,18,2,False,pendente
+899,Paciente_5885,Taguatinga,-15.812914,-48.067721,medicamento_hormonal,3,8,18,3,True,pendente
+900,Paciente_6904,Gama,-16.023935,-48.082342,pos_parto,4,14,18,2,False,pendente
+901,Paciente_8821,Plano Piloto,-15.73582,-47.917973,medicamento_hormonal,3,8,18,3,True,pendente
+902,Paciente_7245,Gama,-16.039402,-48.078538,pos_parto,4,14,18,3,False,pendente
+903,Paciente_8358,Samambaia,-15.907135,-48.060805,pos_parto,4,14,18,1,False,pendente
+904,Paciente_7743,Plano Piloto,-15.82516,-47.94243,medicamento_hormonal,3,8,18,2,True,pendente
+905,Paciente_1695,Samambaia,-15.860209,-48.095426,medicamento_hormonal,3,8,18,1,True,pendente
+906,Paciente_8147,Gama,-16.02723,-48.077243,emergencia_obstetrica,1,0,24,3,False,pendente
+907,Paciente_7493,Plano Piloto,-15.784596,-47.945982,medicamento_hormonal,3,8,18,2,True,pendente
+908,Paciente_4590,Ceilândia,-15.840787,-48.149903,emergencia_obstetrica,1,0,24,2,False,pendente
+909,Paciente_3683,Gama,-16.006775,-48.041703,emergencia_obstetrica,1,0,24,2,False,pendente
+910,Paciente_4831,Samambaia,-15.911629,-48.118391,pos_parto,4,14,18,3,False,pendente
+911,Paciente_3851,Gama,-16.033161,-48.064012,medicamento_hormonal,3,8,18,2,True,pendente
+912,Paciente_3784,Ceilândia,-15.85484,-48.126089,pos_parto,4,14,18,1,False,pendente
+913,Paciente_4364,Ceilândia,-15.788903,-48.114759,pos_parto,4,14,18,3,False,pendente
+914,Paciente_3817,Samambaia,-15.864363,-48.066967,medicamento_hormonal,3,8,18,3,True,pendente
+915,Paciente_5304,Samambaia,-15.849658,-48.092669,emergencia_obstetrica,1,0,24,3,False,pendente
+916,Paciente_9461,Gama,-16.031207,-48.07708,medicamento_hormonal,3,8,18,1,True,pendente
+917,Paciente_4537,Plano Piloto,-15.814624,-47.958388,medicamento_hormonal,3,8,18,2,True,pendente
+918,Paciente_1623,Samambaia,-15.836721,-48.08813,emergencia_obstetrica,1,0,24,3,False,pendente
+919,Paciente_6268,Samambaia,-15.852681,-48.07086,medicamento_hormonal,3,8,18,2,True,pendente
+920,Paciente_3125,Samambaia,-15.834299,-48.073767,violencia_domestica,2,0,24,2,False,pendente
+921,Paciente_7379,Samambaia,-15.856091,-48.12239,emergencia_obstetrica,1,0,24,3,False,pendente
+922,Paciente_6796,Taguatinga,-15.85859,-48.060506,emergencia_obstetrica,1,0,24,2,False,pendente
+923,Paciente_4560,Gama,-16.029871,-48.093031,violencia_domestica,2,0,24,1,False,pendente
+924,Paciente_5612,Gama,-16.021468,-48.064313,emergencia_obstetrica,1,0,24,1,False,pendente
+925,Paciente_9259,Gama,-16.043076,-48.057409,pos_parto,4,14,18,1,False,pendente
+926,Paciente_9102,Taguatinga,-15.853456,-48.049736,violencia_domestica,2,0,24,3,False,pendente
+927,Paciente_3732,Taguatinga,-15.851495,-48.044298,medicamento_hormonal,3,8,18,2,True,pendente
+928,Paciente_4597,Samambaia,-15.891418,-48.105341,medicamento_hormonal,3,8,18,1,True,pendente
+929,Paciente_8646,Samambaia,-15.851629,-48.085012,pos_parto,4,14,18,3,False,pendente
+930,Paciente_9690,Plano Piloto,-15.796432,-47.924013,emergencia_obstetrica,1,0,24,2,False,pendente
+931,Paciente_9254,Gama,-16.012202,-48.090938,pos_parto,4,14,18,2,False,pendente
+932,Paciente_6571,Samambaia,-15.843298,-48.070596,emergencia_obstetrica,1,0,24,2,False,pendente
+933,Paciente_8936,Gama,-15.990127,-48.090796,medicamento_hormonal,3,8,18,1,True,pendente
+934,Paciente_7616,Ceilândia,-15.817604,-48.104148,violencia_domestica,2,0,24,2,False,pendente
+935,Paciente_5542,Samambaia,-15.896631,-48.085176,medicamento_hormonal,3,8,18,3,True,pendente
+936,Paciente_8659,Samambaia,-15.903427,-48.084869,emergencia_obstetrica,1,0,24,3,False,pendente
+937,Paciente_3021,Samambaia,-15.869473,-48.088158,medicamento_hormonal,3,8,18,3,True,pendente
+938,Paciente_7053,Gama,-16.040201,-48.044835,violencia_domestica,2,0,24,1,False,pendente
+939,Paciente_8158,Taguatinga,-15.85547,-48.061377,violencia_domestica,2,0,24,3,False,pendente
+940,Paciente_2301,Samambaia,-15.840813,-48.056657,emergencia_obstetrica,1,0,24,3,False,pendente
+941,Paciente_2157,Taguatinga,-15.821724,-48.026516,medicamento_hormonal,3,8,18,1,True,pendente
+942,Paciente_5999,Samambaia,-15.889858,-48.079612,emergencia_obstetrica,1,0,24,2,False,pendente
+943,Paciente_5357,Taguatinga,-15.848201,-48.04537,violencia_domestica,2,0,24,2,False,pendente
+944,Paciente_3206,Ceilândia,-15.79617,-48.099719,medicamento_hormonal,3,8,18,1,True,pendente
+945,Paciente_4832,Gama,-16.023682,-48.076733,medicamento_hormonal,3,8,18,3,True,pendente
+946,Paciente_8340,Ceilândia,-15.827288,-48.093648,violencia_domestica,2,0,24,1,False,pendente
+947,Paciente_8500,Gama,-16.046305,-48.039821,pos_parto,4,14,18,3,False,pendente
+948,Paciente_7337,Plano Piloto,-15.743554,-47.880006,medicamento_hormonal,3,8,18,1,True,pendente
+949,Paciente_6975,Ceilândia,-15.782322,-48.123437,violencia_domestica,2,0,24,2,False,pendente
+950,Paciente_2257,Gama,-15.99301,-48.045528,emergencia_obstetrica,1,0,24,2,False,pendente
+951,Paciente_5340,Taguatinga,-15.838117,-48.06253,pos_parto,4,14,18,1,False,pendente
+952,Paciente_2756,Taguatinga,-15.846778,-48.042199,emergencia_obstetrica,1,0,24,2,False,pendente
+953,Paciente_6941,Gama,-15.998322,-48.089361,pos_parto,4,14,18,1,False,pendente
+954,Paciente_2548,Taguatinga,-15.831691,-48.058104,pos_parto,4,14,18,3,False,pendente
+955,Paciente_9789,Gama,-16.037922,-48.06609,violencia_domestica,2,0,24,2,False,pendente
+956,Paciente_2350,Gama,-16.027782,-48.046146,pos_parto,4,14,18,3,False,pendente
+957,Paciente_1981,Taguatinga,-15.833564,-48.067214,violencia_domestica,2,0,24,2,False,pendente
+958,Paciente_4891,Plano Piloto,-15.810181,-47.975224,violencia_domestica,2,0,24,3,False,pendente
+959,Paciente_9811,Ceilândia,-15.848887,-48.102984,emergencia_obstetrica,1,0,24,2,False,pendente
+960,Paciente_5109,Taguatinga,-15.818345,-48.054996,medicamento_hormonal,3,8,18,1,True,pendente
+961,Paciente_5812,Ceilândia,-15.84561,-48.081494,violencia_domestica,2,0,24,3,False,pendente
+962,Paciente_3663,Ceilândia,-15.823685,-48.115305,pos_parto,4,14,18,3,False,pendente
+963,Paciente_7454,Ceilândia,-15.847125,-48.088645,emergencia_obstetrica,1,0,24,2,False,pendente
+964,Paciente_3092,Gama,-16.003821,-48.048238,emergencia_obstetrica,1,0,24,2,False,pendente
+965,Paciente_1609,Plano Piloto,-15.732975,-47.909602,medicamento_hormonal,3,8,18,3,True,pendente
+966,Paciente_1277,Plano Piloto,-15.804367,-47.911976,pos_parto,4,14,18,2,False,pendente
+967,Paciente_2908,Ceilândia,-15.818272,-48.077712,pos_parto,4,14,18,3,False,pendente
+968,Paciente_9423,Gama,-16.012556,-48.07748,emergencia_obstetrica,1,0,24,1,False,pendente
+969,Paciente_2456,Taguatinga,-15.851863,-48.028385,medicamento_hormonal,3,8,18,3,True,pendente
+970,Paciente_3771,Samambaia,-15.844306,-48.116879,violencia_domestica,2,0,24,3,False,pendente
+971,Paciente_2762,Samambaia,-15.882128,-48.073913,medicamento_hormonal,3,8,18,1,True,pendente
+972,Paciente_4321,Samambaia,-15.900912,-48.093185,pos_parto,4,14,18,2,False,pendente
+973,Paciente_3356,Taguatinga,-15.819008,-48.071282,violencia_domestica,2,0,24,3,False,pendente
+974,Paciente_1392,Gama,-15.989841,-48.089471,violencia_domestica,2,0,24,1,False,pendente
+975,Paciente_5262,Taguatinga,-15.811013,-48.08158,pos_parto,4,14,18,2,False,pendente
+976,Paciente_3143,Ceilândia,-15.801574,-48.148431,pos_parto,4,14,18,2,False,pendente
+977,Paciente_5382,Ceilândia,-15.804754,-48.132681,violencia_domestica,2,0,24,1,False,pendente
+978,Paciente_1941,Samambaia,-15.881149,-48.054688,medicamento_hormonal,3,8,18,2,True,pendente
+979,Paciente_5067,Samambaia,-15.83602,-48.083716,emergencia_obstetrica,1,0,24,1,False,pendente
+980,Paciente_1979,Gama,-15.989279,-48.057579,medicamento_hormonal,3,8,18,2,True,pendente
+981,Paciente_1750,Taguatinga,-15.809751,-48.056021,emergencia_obstetrica,1,0,24,1,False,pendente
+982,Paciente_9758,Gama,-16.000248,-48.0456,medicamento_hormonal,3,8,18,3,True,pendente
+983,Paciente_7909,Plano Piloto,-15.819326,-47.936125,violencia_domestica,2,0,24,3,False,pendente
+984,Paciente_1435,Samambaia,-15.906037,-48.064256,violencia_domestica,2,0,24,1,False,pendente
+985,Paciente_7363,Ceilândia,-15.8063,-48.095383,pos_parto,4,14,18,1,False,pendente
+986,Paciente_6481,Samambaia,-15.836111,-48.079936,pos_parto,4,14,18,3,False,pendente
+987,Paciente_5646,Taguatinga,-15.856868,-48.060412,medicamento_hormonal,3,8,18,1,True,pendente
+988,Paciente_3435,Gama,-15.995845,-48.035312,medicamento_hormonal,3,8,18,3,True,pendente
+989,Paciente_6493,Ceilândia,-15.828268,-48.081207,emergencia_obstetrica,1,0,24,3,False,pendente
+990,Paciente_5882,Plano Piloto,-15.801621,-47.918382,pos_parto,4,14,18,2,False,pendente
+991,Paciente_6031,Plano Piloto,-15.745478,-47.892872,violencia_domestica,2,0,24,1,False,pendente
+992,Paciente_5802,Taguatinga,-15.831036,-48.072196,emergencia_obstetrica,1,0,24,1,False,pendente
+993,Paciente_4492,Ceilândia,-15.805335,-48.115605,emergencia_obstetrica,1,0,24,2,False,pendente
+994,Paciente_4222,Gama,-16.042226,-48.070555,pos_parto,4,14,18,2,False,pendente
+995,Paciente_5293,Ceilândia,-15.822306,-48.084922,emergencia_obstetrica,1,0,24,1,False,pendente
+996,Paciente_8474,Samambaia,-15.869115,-48.060992,pos_parto,4,14,18,2,False,pendente
+997,Paciente_9021,Ceilândia,-15.852561,-48.106181,violencia_domestica,2,0,24,1,False,pendente
+998,Paciente_2459,Taguatinga,-15.823981,-48.061705,violencia_domestica,2,0,24,1,False,pendente
+999,Paciente_4652,Ceilândia,-15.84969,-48.109313,medicamento_hormonal,3,8,18,3,True,pendente
+1000,Paciente_8176,Samambaia,-15.848972,-48.117588,violencia_domestica,2,0,24,2,False,pendente
