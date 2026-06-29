@@ -12,7 +12,7 @@ st.title("📊 Distribuição de Pacientes por Região (DF)")
 @st.cache_data
 def carregar_dados():
     # Substitua pelo caminho do seu CSV
-    return pd.read_csv('pacientes_df.csv')
+    return pd.read_csv('data/pacientes_df.csv')
 
 df = carregar_dados()
 
