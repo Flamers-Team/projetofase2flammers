@@ -1,47 +1,82 @@
+
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import time
 
-# Configura a página do Streamlit
-st.set_page_config(page_title="Dashboard de Pacientes", layout="wide")
+from src.populacao import gerar_populacao_inicial
+from src.aptidao import avaliar_fitness, decodificar_rotas
+from src.selecao import selecionar_progenitores
+from src.cruzamento import crossover_ordem_ox
+from src.mutacao import aplicar_mutacao_troca
+from src.substituicao import ordenar_e_aplicar_elitismo
+from src.metricas import avaliar_eficiencia_geracao
 
-# Título do App
-st.title("📊 Distribuição de Pacientes por Região (DF)")
+st.set_page_config(page_title="Otimizador GA - VRP", layout="wide")
+st.title("🧬 Painel Modular do Algoritmo Genético (VRP - DF)")
 
-# Carrega os dados (Usando cache para não recarregar o CSV a cada clique)
-@st.cache_data
-def carregar_dados():
-    # Substitua pelo caminho do seu CSV
-    return pd.read_csv('data/pacientes_df.csv')
 
-df = carregar_dados()
+# 1. Configuração de Parâmetros na Barra Lateral
+st.sidebar.header("🎛️ Parâmetros das Etapas")
+TAM_POPULACAO = st.sidebar.slider("Tamanho da População (populacao.py)", 10, 200, 50)
+GERACOES = st.sidebar.slider("Número de Gerações", 10, 300, 100)
+PROB_MUTACAO = st.sidebar.slider("Taxa de Mutação (mutacao.py)", 0.0, 1.0, 0.2, step=0.05)
+NUM_VEICULOS = st.sidebar.number_input("Frota de Veículos", 1, 10, 4)
+CAPACIDADE_MAX = st.sidebar.number_input("Capacidade de Carga (Caixas)", 10, 100, 30)
 
-# -----------------
-# 1. Preparação dos Dados
-# -----------------
-# Conta os pacientes e reseta o index para criar um DataFrame limpo para o Plotly
-df_contagem = df['regiao_administrativa'].value_counts().reset_index()
-df_contagem.columns = ['Região Administrativa', 'Quantidade de Pacientes']
 
-# -----------------
-# 2. Exibição na Tela
-# -----------------
-col1, col2 = st.columns(2)
+# Carrega a base local
+try:
+    df_pacientes = pd.read_csv('pacientes_df.csv')
+    # Limitando para teste rápido na interface se necessário
+    df_filtrado = df_pacientes.head(30) 
+except FileNotFoundError:
+    st.error("❌ Arquivo 'pacientes_df.csv' não encontrado. Rode o gerador primeiro!")
+    st.stop()
 
-with col1:
-    st.subheader("Tabela de Dados")
-    # Exibe um dataframe interativo
-    st.dataframe(df_contagem, use_container_width=True)
-
-with col2:
-    st.subheader("Gráfico de Barras")
-    # Cria o gráfico com Plotly
-    fig_barras = px.bar(
-        df_contagem, 
-        x='Região Administrativa', 
-        y='Quantidade de Pacientes',
-        text_auto=True, # Mostra o número em cima da barra
-        title="Pacientes por RA"
-    )
-    # Renderiza o gráfico no Streamlit
-    st.plotly_chart(fig_barras, use_container_width=True)
+if st.button("🚀 Iniciar Ciclo Evolutivo Interativo"):
+    # Estado inicial
+    COORD_HOSPITAL = (-15.7984, -47.8864) # Hospital de Base
+    num_pacientes = len(df_filtrado)
+    
+    # ETAPA 1: População Inicial
+    populacao = gerar_populacao_inicial(num_pacientes, TAM_POPULACAO)
+    
+    historico_melhor_fitness = []
+    
+    # Containers para atualização em tempo real na tela
+    grafico_placeholder = st.empty()
+    status_placeholder = st.empty()
+    
+    for g in range(GERACOES):
+        # ETAPA 2: Aptidão
+        fitness_valores = [avaliar_fitness(ind, df_filtrado, COORD_HOSPITAL, NUM_VEICULOS, CAPACIDADE_MAX) for ind in populacao]
+        
+        # ETAPA 6: Ordenação e Elitismo para Substituição
+        populacao, fitness_valores, melhor_individuo = ordenar_e_aplicar_elitismo(populacao, fitness_valores)
+        
+        # ETAPA 7: Coleta de Métricas da geração corrente
+        metricas_gen = avaliar_eficiencia_geracao(fitness_valores)
+        historico_melhor_fitness.append(metricas_gen["melhor_score"])
+        
+        # Atualiza o gráfico de linha interativo do Streamlit na tela
+        df_plot = pd.DataFrame({"Score de Fitness (Menor é melhor)": historico_melhor_fitness})
+        grafico_placeholder.line_chart(df_plot)
+        status_placeholder.metric(label=f"Geração {g+1}/{GERACOES}", value=f"{metricas_gen['melhor_score']:.2f} km/score")
+        
+        # Monta a nova geração estruturando o ciclo evolutivo completo
+        nova_geracao = [melhor_individuo] # Mantém o melhor pelo Elitismo
+        
+        while len(nova_geracao) < TAM_POPULACAO:
+            # ETAPA 3: Seleção
+            p1, p2 = selecionar_progenitores(populacao, fitness_valores)
+            # ETAPA 4: Cruzamento
+            filho = crossover_ordem_ox(p1, p2)
+            # ETAPA 5: Mutação
+            filho = aplicar_mutacao_troca(filho, PROB_MUTACAO)
+            
+            nova_geracao.append(filho)
+            
+        populacao = nova_geracao
+        time.sleep(0.01) # Pequena pausa para os olhos humanos acompanharem a convergência gráfica
+        
+    st.success("🏆 Otimização concluída com sucesso! Verifique as curvas de convergência acima.")
