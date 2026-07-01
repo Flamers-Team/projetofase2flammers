@@ -1,4 +1,3 @@
-# src/substituicao.py
 from typing import List, Tuple
 
 def ordenar_e_aplicar_elitismo(populacao: List[List[int]], fitness_valores: List[float]) -> Tuple[List[List[int]], List[float], List[int]]:
@@ -9,7 +8,6 @@ def ordenar_e_aplicar_elitismo(populacao: List[List[int]], fitness_valores: List
     combinado = sorted(list(zip(populacao, fitness_valores)), key=lambda x: x[1])
     populacao_ordenada, fitness_ordenado = zip(*combinado)
     
-    # Retorna a população como lista, o fitness correspondente e o melhor cromossomo isolado
     return list(populacao_ordenada), list(fitness_ordenado), copy_individual(populacao_ordenada[0])
 
 def copy_individual(ind: List[int]) -> List[int]:

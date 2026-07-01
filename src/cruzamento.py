@@ -1,11 +1,10 @@
-# src/cruzamento.py
+
 import random
 from typing import List
 
 def crossover_ordem_ox(parent1: List[int], parent2: List[int]) -> List[int]:
     """
-    Operador de Cruzamento por Ordem (OX) original do professor.
-    Preserva trechos contíguos de rotas evitando duplicidade de pacientes.
+    Cruzamento por Ordem (OX) 
     """
     length = len(parent1)
     start_idx = random.randint(0, length - 1)
