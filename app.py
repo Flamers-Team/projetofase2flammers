@@ -4,9 +4,9 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import time
-import random
+import json
 
-# Importando os módulos estruturados da sua pasta src
+# Importando os módulos estruturados da pasta src
 from src.populacao import gerar_populacao_inicial
 from src.aptidao import avaliar_fitness, decodificar_rotas
 from src.selecao import selecionar_progenitores
@@ -15,189 +15,194 @@ from src.mutacao import aplicar_mutacao_troca
 from src.substituicao import ordenar_e_aplicar_elitismo
 from src.metricas import avaliar_eficiencia_geracao
 
-# 1. CONFIGURAÇÃO DA PÁGINA
-st.set_page_config(page_title="Roteirizador de Saúde da Mulher", layout="wide")
+# --- CONFIGURAÇÃO DO AMBIENTE DEV ---
+st.set_page_config(page_title="DevTools - AG VRP", layout="wide", initial_sidebar_state="expanded")
 
-# 2. BANCO DE DADOS DE HOSPITAIS (Coordenadas Reais do DF)
 HOSPITAIS = {
     "Hospital de Base (Plano Piloto)": (-15.7984, -47.8864),
     "Hospital Regional de Ceilândia": (-15.8239, -48.1152),
-    "Hospital Regional de Taguatinga": (-15.8335, -48.0628),
-    "Hospital Regional de Samambaia": (-15.8741, -48.0848)
+    "Hospital Regional de Taguatinga": (-15.8335, -48.0628)
 }
 
-# 3. INICIALIZAÇÃO DA MEMÓRIA DO APP (st.session_state)
-if 'df_ativo' not in st.session_state:
+# --- CARREGAMENTO DO DATASET ATUALIZADO ---
+@st.cache_data
+def carregar_dados():
     try:
-        # Carrega os seus pacientes do arquivo CSV
-        st.session_state.df_ativo = pd.read_csv('data/pacientes_df.csv').head(25) # Limitado a 25 para visualização limpa
+        # Carrega a base que geramos com "atencao_basica"
+        df = pd.read_csv('data/pacientes_df.csv')
+        return df.head(35) # Limitado a 35 paradas para testes rápidos de convergência
     except FileNotFoundError:
-        st.error("❌ Arquivo 'pacientes_df.csv' não encontrado na raiz do projeto. Garanta que ele exista!")
+        st.error("Arquivo 'pacientes_df.csv' não encontrado.")
         st.stop()
 
-if 'rotas_finais' not in st.session_state:
-    st.session_state.rotas_finais = None
-if 'historico_convergencia' not in st.session_state:
-    st.session_state.historico_convergencia = []
+df_pacientes = carregar_dados()
 
-# --- BARRA LATERAL: PARÂMETROS E CONTROLES ---
-st.sidebar.header("🏥 Configuração da Central")
-hospital_selecionado = st.sidebar.selectbox("Selecione o Hospital de Origem (Depósito):", list(HOSPITAIS.keys()))
+# Variáveis de sessão para guardar os testes
+if 'resultado_ag' not in st.session_state:
+    st.session_state.resultado_ag = None
+
+# ==========================================
+# BARRA LATERAL: CALIBRADOR DE HIPERPARÂMETROS
+# ==========================================
+st.sidebar.markdown("### ⚙️ Painel de Engenharia")
+st.sidebar.caption("Ajuste os parâmetros para simular o payload da futura API.")
+
+hospital_selecionado = st.sidebar.selectbox("Ponto de Partida (Depósito)", list(HOSPITAIS.keys()))
 COORD_HOSPITAL = HOSPITAIS[hospital_selecionado]
 
-st.sidebar.markdown("---")
-st.sidebar.header("🧬 Parâmetros do Algoritmo Genético")
-TAM_POPULACAO = st.sidebar.slider("Tamanho da População", 20, 150, 50)
-GERACOES = st.sidebar.slider("Número de Gerações", 10, 200, 80)
-PROB_MUTACAO = st.sidebar.slider("Taxa de Mutação", 0.0, 1.0, 0.2, step=0.05)
-NUM_VEICULOS = st.sidebar.number_input("Veículos na Frota", 1, 6, 3)
-CAPACIDADE_MAX = st.sidebar.number_input("Capacidade por Veículo (Caixas)", 10, 50, 25)
+st.sidebar.markdown("#### Motor Evolutivo")
+TAM_POPULACAO = st.sidebar.number_input("Tamanho da População", min_value=10, max_value=500, value=50, step=10)
+GERACOES = st.sidebar.number_input("Número de Gerações", min_value=10, max_value=1000, value=100, step=10)
+PROB_MUTACAO = st.sidebar.slider("Taxa de Mutação (Exploração)", 0.0, 1.0, 0.25, step=0.05)
 
-# --- FUNÇÃO PARA EXECUTAR O ALGORITMO GENÉTICO ---
-def executar_otimizacao():
-    df = st.session_state.df_ativo
-    num_pacientes = len(df)
+st.sidebar.markdown("#### Restrições VRP (Frota)")
+NUM_VEICULOS = st.sidebar.slider("Quantidade de Veículos", 1, 10, 4)
+CAPACIDADE_MAX = st.sidebar.slider("Capacidade de Carga (Caixas)", 10, 100, 30)
+
+# ==========================================
+# NÚCLEO DE EXECUÇÃO (MOCK DA API)
+# ==========================================
+def executar_teste_benchmark():
+    num_pacientes = len(df_pacientes)
+    tempo_inicio = time.time() # Inicia o cronômetro de hardware
     
-    # Etapa 1: População Inicial (módulo populacao.py)
     populacao = gerar_populacao_inicial(num_pacientes, TAM_POPULACAO)
-    
     historico = []
-    progresso_barra = st.progress(0)
-    status_texto = st.empty()
+    
+    progresso = st.progress(0)
     
     for g in range(GERACOES):
-        # Etapa 2: Avaliação de Aptidão (módulo aptidao.py)
-        fitness_valores = [avaliar_fitness(ind, df, COORD_HOSPITAL, NUM_VEICULOS, CAPACIDADE_MAX) for ind in populacao]
+        fitness_valores = [avaliar_fitness(ind, df_pacientes, COORD_HOSPITAL, NUM_VEICULOS, CAPACIDADE_MAX) for ind in populacao]
+        populacao, fitness_valores, melhor_ind = ordenar_e_aplicar_elitismo(populacao, fitness_valores)
         
-        # Etapa 6: Ordenação e Elitismo (módulo substituicao.py)
-        populacao, fitness_valores, melhor_individuo = ordenar_e_aplicar_elitismo(populacao, fitness_valores)
-        
-        # Etapa 7: Coleta de Métricas (módulo metricas.py)
         metricas = avaliar_eficiencia_geracao(fitness_valores)
         historico.append(metricas["melhor_score"])
+        progresso.progress((g + 1) / GERACOES)
         
-        # Atualiza o progresso visual na tela
-        progresso_barra.progress((g + 1) / GERACOES)
-        status_texto.text(f"Evoluindo Geração {g+1}/{GERACOES} | Melhor Rota Atual: {metricas['melhor_score']:.2f} km/custo")
-        
-        # Montagem da nova população seguindo o fluxo de reprodução
-        nova_populacao = [melhor_individuo]
+        nova_populacao = [melhor_ind]
         while len(nova_populacao) < TAM_POPULACAO:
-            # Etapa 3: Seleção (módulo selecao.py)
             p1, p2 = selecionar_progenitores(populacao, fitness_valores)
-            # Etapa 4: Cruzamento (módulo cruzamento.py)
             filho = crossover_ordem_ox(p1, p2)
-            # Etapa 5: Mutação (módulo mutacao.py)
             filho = aplicar_mutacao_troca(filho, PROB_MUTACAO)
             nova_populacao.append(filho)
             
         populacao = nova_populacao
+        
+    tempo_fim = time.time() # Para o cronômetro
     
-    # Salva os resultados finais na memória da sessão
-    st.session_state.rotas_finais = decodificar_rotas(populacao[0], df, NUM_VEICULOS, CAPACIDADE_MAX)
-    st.session_state.historico_convergencia = historico
-    st.success("🏁 Rotas Otimizadas com Sucesso!")
-
-# Botão para disparar o cálculo inicial do dia
-if st.sidebar.button("🚀 Calcular Rotas Otimizadas", use_container_width=True):
-    executar_otimizacao()
-
-# --- BOTÃO DE URGÊNCIA EM TEMPO REAL ---
-st.sidebar.markdown("---")
-st.sidebar.subheader("🚨 Eventos Adversos")
-if st.sidebar.button("🚨 Adicionar Emergência Obstétrica", type="primary", use_container_width=True):    # Simula a chegada repentina de uma paciente grave em Ceilândia ou Taguatinga
-    nova_urgencia = {
-        'id_paciente': len(st.session_state.df_ativo) + 1,
-        'nome_ficticio': f"URGÊNCIA_PACIENTE_{random.randint(100, 999)}",
-        'regiao_administrativa': random.choice(['Ceilândia', 'Taguatinga']),
-        'latitude': COORD_HOSPITAL[0] + random.uniform(-0.04, 0.04),
-        'longitude': COORD_HOSPITAL[1] + random.uniform(-0.04, 0.04),
-        'tipo_atendimento': 'emergencia_obstetrica',
-        'prioridade': 1, # Máxima urgência médica
-        'janela_inicio': 0,
-        'janela_fim': 24,
-        'demanda_caixas': 1,
-        'temperatura_controlada': False,
-        'status': 'pendente'
+    rotas_finais = decodificar_rotas(populacao[0], df_pacientes, NUM_VEICULOS, CAPACIDADE_MAX)
+    
+    # Monta a estrutura que será devolvida pela API para o frontend React
+    st.session_state.resultado_ag = {
+        "metadados": {
+            "tempo_processamento_segundos": round(tempo_fim - tempo_inicio, 3),
+            "geracoes_processadas": GERACOES,
+            "pacientes_atendidos": num_pacientes
+        },
+        "score_fitness_final": round(historico[-1], 2),
+        "historico_convergencia": historico,
+        "rotas": rotas_finais
     }
-    # Insere a nova paciente no banco de dados ativo e força o recálculo do AG imediatamente
-    st.session_state.df_ativo = pd.concat([st.session_state.df_ativo, pd.DataFrame([nova_urgencia])], ignore_index=True)
-    st.sidebar.warning("🚨 Nova emergência detectada! Recalculando frotas...")
-    executar_otimizacao()
+    
+    st.sidebar.success(f"Benchmark finalizado em {st.session_state.resultado_ag['metadados']['tempo_processamento_segundos']}s")
 
-# --- ÁREA PRINCIPAL DA INTERFACE VISUAL ---
-st.title("🏥 Sistema de Otimização de Rotas: Saúde da Mulher (DF)")
+if st.sidebar.button("⚙️ Rodar Benchmark do Algoritmo", type="primary", use_container_width=True):
+    executar_teste_benchmark()
 
-col_esquerda, col_direita = st.columns([2, 1])
+# ==========================================
+# ÁREA PRINCIPAL: VISUALIZAÇÃO DE DEV
+# ==========================================
+st.title("🔬 DevTools: Validação do Algoritmo Genético")
 
-with col_esquerda:
-    st.subheader("🗺️ Mapa de Roteirização da Frota")
+# Cria abas organizadas para separar a análise visual da análise de dados
+aba_mapa, aba_metricas, aba_api, aba_dados = st.tabs([
+    "🗺️ Prova Visual (Mapa)", 
+    "📈 Análise de Convergência", 
+    "💻 Contrato API (Output JSON)", 
+    "🗃️ Dataset (Atenção Básica)"
+])
+
+# --- ABA 1: MAPA ---
+with aba_mapa:
+    st.markdown("Verificação de sanidade geométrica (as rotas estão se cruzando muito? Os veículos estão voltando à base?)")
+    mapa = folium.Map(location=COORD_HOSPITAL, zoom_start=11)
     
-    # Inicializa o mapa centralizado nas coordenadas do hospital escolhido
-    mapa = folium.Map(location=COORD_HOSPITAL, zoom_start=12)
+    folium.Marker(COORD_HOSPITAL, popup="DEPOSITO", icon=folium.Icon(color="black", icon="building", prefix="fa")).add_to(mapa)
     
-    # Desenha o Hospital de Origem (Marcador Grande e Azul)
-    folium.Marker(
-        COORD_HOSPITAL, 
-        popup=f"<b>BASE: {hospital_selecionado}</b>", 
-        icon=folium.Icon(color="blue", icon="home", prefix="fa")
-    ).add_to(mapa)
-    
-    df_atual = st.session_state.df_ativo
-    
-    # Cores fixas para identificar cada veículo/rota na tela
-    cores_veiculos = ['red', 'purple', 'orange', 'green', 'cadetblue', 'darkred']
-    
-    # Se as rotas já tiverem sido calculadas, desenha os caminhos na tela
-    if st.session_state.rotas_finais is not None:
-        for idx_veiculo, rota in enumerate(st.session_state.rotas_finais):
+    if st.session_state.resultado_ag:
+        cores = ['red', 'blue', 'green', 'purple', 'orange', 'darkred']
+        
+        for idx_v, rota in enumerate(st.session_state.resultado_ag['rotas']):
             if not rota: continue
+            cor = cores[idx_v % len(cores)]
+            coords_rota = [COORD_HOSPITAL]
             
-            cor = cores_veiculos[idx_veiculo % len(cores_veiculos)]
-            coordenadas_caminho = [COORD_HOSPITAL] # Inicia no Hospital
-            
-            for ordem, idx_paciente in enumerate(rota):
-                paciente = df_atual.iloc[idx_paciente]
-                pos_paciente = (paciente['latitude'], paciente['longitude'])
-                coordenadas_caminho.append(pos_paciente)
+            for idx_p in rota:
+                p = df_pacientes.iloc[idx_p]
+                coords_rota.append((p['latitude'], p['longitude']))
                 
-                # Ícones baseados na gravidade da situação médica da mulher
-                icone = "exclamation-triangle" if paciente['prioridade'] == 1 else "medkit"
+                # Tratamento visual das novas categorias (incluindo atencao_basica)
+                icone_dict = {
+                    'violencia_domestica': 'user-secret',
+                    'medicamento_hormonal': 'snowflake-o',
+                    'pos_parto': 'child',
+                    'atencao_basica': 'stethoscope'
+                }
+                icone_selecionado = icone_dict.get(p['tipo_atendimento'], 'info')
                 
                 folium.Marker(
-                    pos_paciente,
-                    popup=f"Veículo {idx_veiculo+1} | Parada {ordem+1}<br><b>{paciente['nome_ficticio']}</b><br>{paciente['tipo_atendimento'].upper()}",
-                    icon=folium.Icon(color=cor, icon=icone, prefix="fa")
+                    (p['latitude'], p['longitude']),
+                    popup=f"[{p['prioridade']}] {p['tipo_atendimento']}",
+                    icon=folium.Icon(color=cor, icon=icone_selecionado, prefix="fa")
                 ).add_to(mapa)
                 
-            coordenadas_caminho.append(COORD_HOSPITAL) # Obriga a fechar o circuito de volta ao Hospital
+            coords_rota.append(COORD_HOSPITAL)
+            folium.PolyLine(coords_rota, color=cor, weight=3, opacity=0.7).add_to(mapa)
             
-            # Desenha a linha conectando os pontos da rota desse veículo específico
-            folium.PolyLine(coordenadas_caminho, color=cor, weight=4, opacity=0.8).add_to(mapa)
+    st_folium(mapa, width=900, height=500, returned_objects=[])
+
+# --- ABA 2: MÉTRICAS ---
+with aba_metricas:
+    if st.session_state.resultado_ag:
+        col1, col2 = st.columns(2)
+        col1.metric("Score de Fitness Final (km + penalidades)", f"{st.session_state.resultado_ag['score_fitness_final']}")
+        col2.metric("Tempo de Processamento (Hardware)", f"{st.session_state.resultado_ag['metadados']['tempo_processamento_segundos']} s")
+        
+        st.markdown("### Curva de Minimização de Custo")
+        st.line_chart(st.session_state.resultado_ag['historico_convergencia'])
     else:
-        # Se ainda não calculou as rotas, apenas plota os pacientes soltos como pontos pendentes
-        for _, paciente in df_atual.iterrows():
-            folium.CircleMarker(
-                location=(paciente['latitude'], paciente['longitude']),
-                radius=6,
-                color="gray",
-                fill=True,
-                popup=f"{paciente['nome_ficticio']} (Aguardando Rota)"
-            ).add_to(mapa)
+        st.info("Execute o algoritmo para visualizar as métricas.")
+
+# --- ABA 3: CONTRATO DA API ---
+with aba_api:
+    st.markdown("Este é o modelo exato do **Response Payload** que o Python deverá retornar para o React quando o endpoint `/api/v1/otimizar` for chamado.")
+    if st.session_state.resultado_ag:
+        # Formata os dados numéricos brutos para um JSON legível para os devs do Front
+        mock_response = {
+            "status": "success",
+            "metadata": st.session_state.resultado_ag['metadados'],
+            "optimization_result": {
+                "total_fitness_score": st.session_state.resultado_ag['score_fitness_final'],
+                "fleet_routes": []
+            }
+        }
+        
+        # Mapeia as rotas para o JSON
+        for id_veiculo, rota in enumerate(st.session_state.resultado_ag['rotas']):
+            ids_pacientes = [int(df_pacientes.iloc[i]['id_paciente']) for i in rota]
+            mock_response["optimization_result"]["fleet_routes"].append({
+                "vehicle_id": id_veiculo + 1,
+                "stop_sequence_ids": ids_pacientes,
+                "total_stops": len(ids_pacientes)
+            })
             
-    # Renderiza o mapa Folium dentro da interface do Streamlit
-    st_folium(mapa, width=800, height=500, returned_objects=[])
-
-with col_direita:
-    st.subheader("📈 Curva de Convergência (Eficácia)")
-    if st.session_state.historico_convergencia:
-        # Plota o gráfico de linha provando a evolução matemática da taxa de aptidão
-        st.line_chart(st.session_state.historico_convergencia)
-        st.caption("O gráfico decrescente comprova que o Algoritmo Genético está eliminando caminhos ruins e reduzindo a distância total da frota.")
+        st.json(mock_response)
     else:
-        st.info("Clique em 'Calcular Rotas Otimizadas' para iniciar a evolução e visualizar o gráfico de convergência.")
+        st.info("Execute o algoritmo para gerar o mock do Payload JSON.")
 
-# --- SEÇÃO INFERIOR: PAINEL DE DADOS ---
-st.markdown("---")
-st.subheader("📋 Lista de Atendimentos Agendados para o Dia")
-st.dataframe(st.session_state.df_ativo[['id_paciente', 'nome_ficticio', 'regiao_administrativa', 'tipo_atendimento', 'prioridade', 'demanda_caixas', 'status']], use_container_width=True)
+# --- ABA 4: AUDITORIA DO DATASET ---
+with aba_dados:
+    st.markdown("Verificação da nova distribuição de categorias:")
+    # Mostra a porcentagem de cada categoria para provar que a atenção básica está lá
+    st.dataframe(df_pacientes['tipo_atendimento'].value_counts(normalize=True) * 100)
+    st.dataframe(df_pacientes)
