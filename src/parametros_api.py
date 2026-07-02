@@ -29,8 +29,8 @@ def calcular_lower_bound_teorico(df: pd.DataFrame, coord_hospital: tuple, capaci
 def rodar_otimizacao_api(
     lista_pacientes: list,          
     coordenadas_hospital: tuple,    
-    config_algoritmo: dict,         # Agora exige: {"populacao": 50, "mutacao": 0.25, "geracoes": 200, "paciencia": 30, "semente": 42}
-    config_frota: dict              # Agora exige: {"veiculos": 4, "capacidade": 30, "autonomia_km": 120.0}
+    config_algoritmo: dict,         
+    config_frota: dict              
 ) -> dict:
     """
     Controlador da API: Orquestra a evolução, impõe limites de infraestrutura (Early Stopping),
@@ -39,8 +39,9 @@ def rodar_otimizacao_api(
     
     # 0. Trava de Determinismo (Idempotência da API)
     semente = config_algoritmo.get("semente", 42)
-    random.seed(semente)
-    np.random.seed(semente)
+    if semente is not None:
+        random.seed(semente)
+        np.random.seed(semente)
     
     # 1. Parsing dos Dados
     df_pacientes = pd.DataFrame(lista_pacientes)
@@ -49,8 +50,12 @@ def rodar_otimizacao_api(
     # 2. Extração Segura de Parâmetros (com valores default de fallback)
     TAM_POP = config_algoritmo.get("populacao", 50)
     GERACOES_MAX = config_algoritmo.get("geracoes", 200)
-    PACIENCIA = config_algoritmo.get("paciencia", 30) # O fusível do servidor
+    PACIENCIA = config_algoritmo.get("paciencia", 30) 
     PROB_MUTACAO = config_algoritmo.get("mutacao", 0.25)
+    
+    # NOVO: Recebendo os novos parâmetros do frontend
+    ESTRATEGIA_INICIAL = config_algoritmo.get("estrategia_inicial", "100% Aleatória")
+    METODO_SELECAO = config_algoritmo.get("metodo_selecao", "Roleta Inversa")
     
     NUM_VEICULOS = config_frota.get("veiculos", 4)
     CAPACIDADE = config_frota.get("capacidade", 30)
@@ -58,8 +63,14 @@ def rodar_otimizacao_api(
 
     tempo_inicio = time.time()
     
-    # 3. Inicialização
-    populacao = gerar_populacao_inicial(num_pacientes, TAM_POP)
+    # 3. Inicialização (NOVO: Passando todos os parâmetros exigidos pela função híbrida)
+    populacao = gerar_populacao_inicial(
+        num_pacientes=num_pacientes, 
+        tam_populacao=TAM_POP,
+        estrategia=ESTRATEGIA_INICIAL,
+        df_pacientes=df_pacientes,
+        coord_hospital=coordenadas_hospital
+    )
     
     melhor_score_global = float('inf')
     geracoes_estagnadas = 0
@@ -67,7 +78,6 @@ def rodar_otimizacao_api(
     
     # 4. O Ciclo Evolutivo com Proteção de Servidor (Early Stopping)
     for g in range(GERACOES_MAX):
-        # Nota: avaliar_fitness agora recebe a AUTONOMIA
         fitness_valores = [avaliar_fitness(ind, df_pacientes, coordenadas_hospital, NUM_VEICULOS, CAPACIDADE, AUTONOMIA) for ind in populacao]
         
         populacao, fitness_valores, melhor_ind = ordenar_e_aplicar_elitismo(populacao, fitness_valores)
@@ -80,7 +90,7 @@ def rodar_otimizacao_api(
         else:
             geracoes_estagnadas += 1
             
-        # Fusível de parada: Se o custo não cai há X gerações, corta o processamento e devolve a resposta HTTP
+        # Fusível de parada
         if geracoes_estagnadas >= PACIENCIA:
             geracao_final = g
             break
@@ -90,7 +100,8 @@ def rodar_otimizacao_api(
         
         # Reprodução
         while len(nova_populacao) < TAM_POP:
-            p1, p2 = selecionar_progenitores(populacao, fitness_valores)
+            # NOVO: Passando o método de seleção (Roleta vs Ranking)
+            p1, p2 = selecionar_progenitores(populacao, fitness_valores, metodo=METODO_SELECAO)
             filho = crossover_ordem_ox(p1, p2)
             filho = aplicar_mutacao_troca(filho, PROB_MUTACAO)
             nova_populacao.append(filho)
@@ -104,14 +115,16 @@ def rodar_otimizacao_api(
     lb_teorico = calcular_lower_bound_teorico(df_pacientes, coordenadas_hospital, CAPACIDADE)
     gap_eficiencia = round(((melhor_score_global - lb_teorico) / lb_teorico) * 100, 2) if lb_teorico > 0 else 0.0
     
-    # 6. Contrato de Resposta (JSON Payload para o React)
+    # 6. Contrato de Resposta (JSON Payload para o React/Flutter)
     return {
         "status": "sucesso",
         "metadados_processamento": {
             "tempo_segundos": round(tempo_fim - tempo_inicio, 3),
             "geracoes_processadas": geracao_final + 1,
             "motivo_parada": "estagnacao_early_stopping" if geracoes_estagnadas >= PACIENCIA else "limite_geracoes_atingido",
-            "semente_utilizada": semente
+            "semente_utilizada": semente,
+            "estrategia_inicial_usada": ESTRATEGIA_INICIAL,
+            "metodo_selecao_usado": METODO_SELECAO
         },
         "auditoria_qualidade": {
             "score_fitness_final": round(melhor_score_global, 2),
